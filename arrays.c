@@ -1,7 +1,7 @@
 /* Source description (Doxygen)========================================= */
 
 /*!
-    \file       arrays.h
+    \file       arrays.c
     \brief      Source file with basic array operations
     \details    Source file for array operations such as initialization, saving on hard drive, opening array files, finding the maximum and minimum of a given array and computing arithmetic, geometric and harmonic mean (when possible)
     \author     NMathematician
@@ -19,7 +19,7 @@
 
 /* Functions prototypes ================================================ */
 
-//Initialize Signed Int Array
+//Initialize Int Array
 
 inline void initializeInt8Array(const numberOfElements *arraySize, int8Array *array)
 {
@@ -80,7 +80,6 @@ inline void initializeInt64Array(const numberOfElements *arraySize, int64Array *
         exit(EXIT_FAILURE);
     }
 }
-
 
 //Initialize Unsigned Int Array
 
@@ -143,7 +142,6 @@ inline void initializeUInt64Array(const numberOfElements *arraySize, uint64Array
         exit(EXIT_FAILURE);
     }
 }
-
 
 //Initialize Float Array
 
@@ -276,7 +274,8 @@ void printDoubleArray(doubleArray *arrayToPrint)
 }
 
 
-//Read Unsigned Int Array
+
+//Read Int Array
 
 void readInt8Array(int8Array *inputArray)
 {
@@ -464,7 +463,6 @@ void readUInt64Array(uint64Array *inputArray)
     }
 }
 
-
 //Read Float Array
 
 void readFloatArray(floatArray *inputArray)
@@ -517,7 +515,7 @@ void readDoubleArray(doubleArray *inputArray)
 
 //Write Array as Binary File
 
-//Write Signed Int Array Binary File
+//Write Int Array Binary File
 
 void writeInt8Array(const int8Array *arrayToWrite)
 {
@@ -1197,7 +1195,7 @@ void writeDoubleArray(const doubleArray *arrayToWrite)
 
 //Open Array as Binary File
 
-//Open Signed Int Array Binary
+//Open Int Array Binary
 
 void openInt8Array(const char *filename, int8Array *arrayOpened)
 {
@@ -1694,9 +1692,10 @@ void openDoubleArray(const char *filename, doubleArray *arrayOpened)
 }
 
 
+
 //Maximum in array
 
-//Maximum Signed Int Array
+//Maximum Int Array
 
 void maxInt8Array(const int8Array *arrayStruct, int8_t *maximum)
 {
@@ -1719,7 +1718,6 @@ void maxInt8Array(const int8Array *arrayStruct, int8_t *maximum)
     }
 }
 
-
 void maxInt16Array(const int16Array *arrayStruct, int16_t *maximum)
 {
     if (arrayStruct->size == 0)
@@ -1741,7 +1739,6 @@ void maxInt16Array(const int16Array *arrayStruct, int16_t *maximum)
     }
 }
 
-
 void maxInt32Array(const int32Array *arrayStruct, int32_t *maximum)
 {
     if (arrayStruct->size == 0)
@@ -1762,7 +1759,6 @@ void maxInt32Array(const int32Array *arrayStruct, int32_t *maximum)
         }
     }
 }
-
 
 void maxInt64Array(const int64Array *arrayStruct, int64_t *maximum)
 {
@@ -1808,7 +1804,6 @@ void maxUInt8Array(const uint8Array *arrayStruct, uint8_t *maximum)
     }
 }
 
-
 void maxUInt16Array(const uint16Array *arrayStruct, uint16_t *maximum)
 {
     if (arrayStruct->size == 0)
@@ -1829,7 +1824,6 @@ void maxUInt16Array(const uint16Array *arrayStruct, uint16_t *maximum)
         }
     }
 }
-
 
 void maxUInt32Array(const uint32Array *arrayStruct, uint32_t *maximum)
 {
@@ -1852,7 +1846,6 @@ void maxUInt32Array(const uint32Array *arrayStruct, uint32_t *maximum)
     }
 }
 
-
 void maxUInt64Array(const uint64Array *arrayStruct, uint64_t *maximum)
 {
     if (arrayStruct->size == 0)
@@ -1873,7 +1866,6 @@ void maxUInt64Array(const uint64Array *arrayStruct, uint64_t *maximum)
         }
     }
 }
-
 
 //Maximum Float Array
 
@@ -2143,7 +2135,7 @@ void minDoubleArray(const doubleArray *arrayStruct, double *minimum)
 
 
 
-//Arithmetic Mean Signed Int Array
+//Arithmetic Mean Int Array
 
 void meanArithmeticInt8Array(const int8Array *arrayStruct, double *mean)
 {
@@ -2314,8 +2306,6 @@ void meanArithmeticUInt64Array(const uint64Array *arrayStruct, double *mean)
     }
 }
 
-
-
 //Arithmetic Mean Float Array
 
 void meanArithmeticFloatArray(const floatArray *arrayStruct, double *mean)
@@ -2362,7 +2352,7 @@ void meanArithmeticDoubleArray(const doubleArray *arrayStruct, double *mean)
 
 
 
-//Geometric Mean Signed Array
+//Geometric Mean Int Array
 
 void meanGeometricInt8Array(const int8Array *arrayStruct, double *mean)
 {
@@ -2600,7 +2590,7 @@ void meanGeometricInt64Array(const int64Array *arrayStruct, double *mean)
     }
 }
 
-//Geometric Mean Unsigned Array
+//Geometric Mean Unsigned Int Array
 
 void meanGeometricUInt8Array(const uint8Array *arrayStruct, double *mean)
 {
@@ -2838,8 +2828,6 @@ void meanGeometricUInt64Array(const uint64Array *arrayStruct, double *mean)
     }
 }
 
-
-
 //Geometric Mean Float Array
 
 void meanGeometricFloatArray(const floatArray *arrayStruct, double *mean)
@@ -2962,7 +2950,7 @@ void meanGeometricDoubleArray(const doubleArray *arrayStruct, double *mean)
 
 
 
-//Harmonic Mean Signed Array
+//Harmonic Mean Int Array
 
 void meanHarmonicInt8Array(const int8Array *arrayStruct, double *mean)
 {
@@ -3204,7 +3192,7 @@ void meanHarmonicInt64Array(const int64Array *arrayStruct, double *mean)
     }
 }
 
-//Harmonic Mean Unsigned Array
+//Harmonic Mean Unsigned Int Array
 
 void meanHarmonicUInt8Array(const uint8Array *arrayStruct, double *mean)
 {

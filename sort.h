@@ -7,6 +7,7 @@
     \file       sort.h
     \brief      Header file with sorting algorithm
     \details    Header file with sorting algorithm for numerical arrays
+                All functions sort arrays in ascending order
     \author     NMathematician
     \version    1.0
     \date       2024 11 14
@@ -506,7 +507,7 @@ void sortHeapDoubleArray(doubleArray *inputArray);
 
 //Radix Sort Int Array
 
-/*! \fn         void sortRadixLSBInt8Array(int8Array *inputArray, int8Array *arraySorted)
+/*! \fn         void sortRadixLSBInt8Array(int8Array *inputArray)
     \brief      Sorts an array of 8 bits integers
     \details    Sorts an array of 8 bits integers in increasing order without comparisons
                 Best case complexity: N/A
@@ -520,7 +521,7 @@ void sortHeapDoubleArray(doubleArray *inputArray);
 */
 void sortRadixLSBInt8Array(int8Array *inputArray);
 
-/*! \fn         void sortRadixLSBInt16Array(int16Array *inputArray, int16Array *arraySorted)
+/*! \fn         void sortRadixLSBInt16Array(int16Array *inputArray)
     \brief      Sorts an array of 16 bits integers
     \details    Sorts an array of 16 bits integers in increasing order without comparisons
                 Best case complexity: N/A
@@ -534,7 +535,7 @@ void sortRadixLSBInt8Array(int8Array *inputArray);
 */
 void sortRadixLSBInt16Array(int16Array *inputArray);
 
-/*! \fn         void sortRadixLSBInt32Array(int32Array *inputArray, int32Array *arraySorted)
+/*! \fn         void sortRadixLSBInt32Array(int32Array *inputArray)
     \brief      Sorts an array of 32 bits integers
     \details    Sorts an array of 32 bits integers in increasing order without comparisons
                 Best case complexity: N/A
@@ -548,7 +549,7 @@ void sortRadixLSBInt16Array(int16Array *inputArray);
 */
 void sortRadixLSBInt32Array(int32Array *inputArray);
 
-/*! \fn         void sortRadixLSBInt64Array(int64Array *inputArray, int64Array *arraySorted)
+/*! \fn         void sortRadixLSBInt64Array(int64Array *inputArray)
     \brief      Sorts an array of 64 bits integers
     \details    Sorts an array of 64 bits integers in increasing order without comparisons
                 Best case complexity: N/A
@@ -669,7 +670,7 @@ void sortRadixLSBDoubleArray(doubleArray *inputArray);
 */
 void sortCountingInt8Array(int8Array *inputArray, int8Array *arraySorted);
 
-/*! \fn         void sortCountingInt8Array(int8Array *inputArray, int8Array *arraySorted)
+/*! \fn         void sortCountingInt16Array(int16Array *inputArray, int16Array *arraySorted)
     \brief      Sorts an array of 16 bits integers
     \details    Sorts an array of 16 bits integers in increasing order using comparisons
                 Best case complexity: N/A

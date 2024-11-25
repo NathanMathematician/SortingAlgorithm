@@ -4,6 +4,7 @@
     \file       sort.c
     \brief      Source file with sorting algorithm
     \details    Source file with sorting algorithm for numerical arrays
+                All functions sort arrays in ascending order
     \author     NMathematician
     \version    1.0
     \date       2024 11 14
