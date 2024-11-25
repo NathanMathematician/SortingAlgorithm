@@ -146,7 +146,7 @@ struct uint64Array
 
 /*!
     \struct     floatArray
-    \brief      Structure of an array of float
+    \brief      Structure of an array of floats
     \details    Array of float pointed with \a array and with \a size number of elements.
 */
 typedef struct floatArray floatArray;
@@ -158,7 +158,7 @@ struct floatArray
 
 /*!
     \struct     doubleArray
-    \brief      Structure of an array of double
+    \brief      Structure of an array of doubles
     \details    Array of double pointed with \a array and with \a size number of elements.
 */
 typedef struct doubleArray doubleArray;
@@ -241,7 +241,7 @@ void initializeUInt64Array(const numberOfElements *arraySize, uint64Array *array
 //Initialize Float Array
 
 /*! \fn         void initializeFloatArray(const numberOfElements *arraySize, floatArray *array)
-    \brief      Initializes an floatArray
+    \brief      Initializes a floatArray
     \details    Initializes \a array of zeroes with size set to \a arraySize
     \param[in]  arraySize   Number of elements of the array
     \param[out] array       Array with \a arraySize elements set to zero
@@ -249,7 +249,7 @@ void initializeUInt64Array(const numberOfElements *arraySize, uint64Array *array
 void initializeFloatArray(const numberOfElements *arraySize, floatArray *array);
 
 /*! \fn         void initializeDoubleArray(const numberOfElements *arraySize, doubleArray *array)
-    \brief      Initializes an doubleArray
+    \brief      Initializes a doubleArray
     \details    Initializes \a array of zeroes with size set to \a arraySize
     \param[in]  arraySize   Number of elements of the array
     \param[out] array       Array with \a arraySize elements set to zero
@@ -313,13 +313,13 @@ void printUInt64Array(uint64Array *arrayToPrint);
 //Print Float Array
 
 /*! \fn         void printFloatArray(floatArray *arrayToPrint)
-    \brief      Print an floatArray to CMD
+    \brief      Print a floatArray to CMD
     \param[in] arrayToPrint    The address of the floatArray which will be printed
 */
 void printFloatArray(floatArray *arrayToPrint);
 
 /*! \fn         void printDoubleArray(doubleArray *arrayToPrint)
-    \brief      Print an doubleArray to CMD
+    \brief      Print a doubleArray to CMD
     \param[in] arrayToPrint    The address of the doubleArray which will be printed
 */
 void printDoubleArray(doubleArray *arrayToPrint);
