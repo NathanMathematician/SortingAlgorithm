@@ -268,6 +268,74 @@ void initializeDoubleArray(const numberOfElements *arraySize, doubleArray *array
 
 
 
+//Print Int Array
+
+/*! \fn         void printInt8Array(int8Array *arrayToPrint)
+    \brief      Print an int8Array to CMD
+    \param[in] arrayToPrint    The address of the int8Array which will be printed
+*/
+void printInt8Array(int8Array *arrayToPrint);
+
+/*! \fn         void printInt16Array(int16Array *arrayToPrint)
+    \brief      Print an int16Array to CMD
+    \param[in] arrayToPrint    The address of the int16Array which will be printed
+*/
+void printInt16Array(int16Array *arrayToPrint);
+
+/*! \fn         void printInt32Array(int32Array *arrayToPrint)
+    \brief      Print an int32Array to CMD
+    \param[in] arrayToPrint    The address of the int32Array which will be printed
+*/
+void printInt32Array(int32Array *arrayToPrint);
+
+/*! \fn         void printInt64Array(int64Array *arrayToPrint)
+    \brief      Print an int64Array to CMD
+    \param[in] arrayToPrint    The address of the int64Array which will be printed
+*/
+void printInt64Array(int64Array *arrayToPrint);
+
+//Print Unsigned Int Array
+
+/*! \fn         void printUInt8Array(uint8Array *arrayToPrint)
+    \brief      Print an uint8Array to CMD
+    \param[in] arrayToPrint    The address of the uint8Array which will be printed
+*/
+void printUInt8Array(uint8Array *arrayToPrint);
+
+/*! \fn         void printUInt16Array(uint16Array *arrayToPrint)
+    \brief      Print an uint16Array to CMD
+    \param[in] arrayToPrint    The address of the uint16Array which will be printed
+*/
+void printUInt16Array(uint16Array *arrayToPrint);
+
+/*! \fn         void printUInt32Array(uint32Array *arrayToPrint)
+    \brief      Print an uint32Array to CMD
+    \param[in] arrayToPrint    The address of the uint32Array which will be printed
+*/
+void printUInt32Array(uint32Array *arrayToPrint);
+
+/*! \fn         void printUInt64Array(uint64Array *arrayToPrint)
+    \brief      Print an uint64Array to CMD
+    \param[in] arrayToPrint    The address of the uint64Array which will be printed
+*/
+void printUInt64Array(uint64Array *arrayToPrint);
+
+//Print Float Array
+
+/*! \fn         void printFloatArray(floatArray *arrayToPrint)
+    \brief      Print an floatArray to CMD
+    \param[in] arrayToPrint    The address of the floatArray which will be printed
+*/
+void printFloatArray(floatArray *arrayToPrint);
+
+/*! \fn         void printDoubleArray(doubleArray *arrayToPrint)
+    \brief      Print an doubleArray to CMD
+    \param[in] arrayToPrint    The address of the doubleArray which will be printed
+*/
+void printDoubleArray(doubleArray *arrayToPrint);
+
+
+
 //Read Signed Int Array
 
 /*! \fn         void readInt8Array(int8Array *inputValue)

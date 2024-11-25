@@ -52,6 +52,16 @@
 */
 #define BYTESIZE_INT64          8U
 
+/*! \def BYTESIZE_FLOAT
+    \brief Shortcut for sizeof(float)
+*/
+#define BYTESIZE_FLOAT          4U
+
+/*! \def BYTESIZE_DOUBLE
+    \brief Shortcut for sizeof(double)
+*/
+#define BYTESIZE_DOUBLE         8U
+
 
 
 /*! \def STRING_SIZE_BASE_10_UINT8

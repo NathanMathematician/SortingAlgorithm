@@ -21,229 +21,257 @@
 
 //Initialize Signed Int Array
 
-void initializeInt8Array(const numberOfElements *arraySize, int8Array *array)
+inline void initializeInt8Array(const numberOfElements *arraySize, int8Array *array)
 {
+    //Initialize the structure
+    array->size = *arraySize;
+
     //Allocate memory for the structure (according to CERT C Coding Standard)
-    array->array = (int8_t *) malloc(sizeof(int8_t) * *arraySize);
+    array->array = (int8_t *) calloc(array->size, BYTESIZE_INT8);
 
     //Memory allocation verification
     if (array->array == NULL)
     {
         exit(EXIT_FAILURE);
-    }
-
-    //Initialize the structure
-    array->size = *arraySize;
-
-    numberOfElements positionCounter = 0;
-
-    for (positionCounter = 0 ; positionCounter < *arraySize ; positionCounter++)
-    {
-        array->array[positionCounter] = 0;
     }
 }
 
-void initializeInt16Array(const numberOfElements *arraySize, int16Array *array)
+inline void initializeInt16Array(const numberOfElements *arraySize, int16Array *array)
 {
+    //Initialize the structure
+    array->size = *arraySize;
+
     //Allocate memory for the structure (according to CERT C Coding Standard)
-    array->array = (int16_t *) malloc(sizeof(int16_t) * *arraySize);
+    array->array = (int16_t *) calloc(array->size, BYTESIZE_INT16);
 
     //Memory allocation verification
     if (array->array == NULL)
     {
         exit(EXIT_FAILURE);
-    }
-
-    //Initialize the structure
-    array->size = *arraySize;
-
-    numberOfElements positionCounter = 0;
-
-    for (positionCounter = 0 ; positionCounter < *arraySize ; positionCounter++)
-    {
-        array->array[positionCounter] = 0;
     }
 }
 
-void initializeInt32Array(const numberOfElements *arraySize, int32Array *array)
+inline void initializeInt32Array(const numberOfElements *arraySize, int32Array *array)
 {
+    //Initialize the structure
+    array->size = *arraySize;
+
     //Allocate memory for the structure (according to CERT C Coding Standard)
-    array->array = (int32_t *) malloc(sizeof(int32_t) * *arraySize);
+    array->array = (int32_t *) calloc(array->size, BYTESIZE_INT32);
 
     //Memory allocation verification
     if (array->array == NULL)
     {
         exit(EXIT_FAILURE);
-    }
-
-    //Initialize the structure
-    array->size = *arraySize;
-
-    numberOfElements positionCounter = 0;
-
-    for (positionCounter = 0 ; positionCounter < *arraySize ; positionCounter++)
-    {
-        array->array[positionCounter] = 0;
     }
 }
 
-void initializeInt64Array(const numberOfElements *arraySize, int64Array *array)
+inline void initializeInt64Array(const numberOfElements *arraySize, int64Array *array)
 {
+    //Initialize the structure
+    array->size = *arraySize;
+
     //Allocate memory for the structure (according to CERT C Coding Standard)
-    array->array = (int64_t *) malloc(sizeof(int64_t) * *arraySize);
+    array->array = (int64_t *) calloc(array->size, BYTESIZE_INT64);
 
     //Memory allocation verification
     if (array->array == NULL)
     {
         exit(EXIT_FAILURE);
-    }
-
-    //Initialize the structure
-    array->size = *arraySize;
-
-    numberOfElements positionCounter = 0;
-
-    for (positionCounter = 0 ; positionCounter < *arraySize ; positionCounter++)
-    {
-        array->array[positionCounter] = 0;
     }
 }
 
 
 //Initialize Unsigned Int Array
 
-void initializeUInt8Array(const numberOfElements *arraySize, uint8Array *array)
+inline void initializeUInt8Array(const numberOfElements *arraySize, uint8Array *array)
 {
+    //Initialize the structure
+    array->size = *arraySize;
+
     //Allocate memory for the structure (according to CERT C Coding Standard)
-    array->array = (uint8_t *) malloc(sizeof(uint8_t) * *arraySize);
+    array->array = (uint8_t *) calloc(array->size, BYTESIZE_INT8);
 
     //Memory allocation verification
     if (array->array == NULL)
     {
         exit(EXIT_FAILURE);
-    }
-
-    //Initialize the structure
-    array->size = *arraySize;
-
-    numberOfElements positionCounter = 0;
-
-    for (positionCounter = 0 ; positionCounter < *arraySize ; positionCounter++)
-    {
-        array->array[positionCounter] = 0;
     }
 }
 
-void initializeUInt16Array(const numberOfElements *arraySize, uint16Array *array)
+inline void initializeUInt16Array(const numberOfElements *arraySize, uint16Array *array)
 {
+    //Initialize the structure
+    array->size = *arraySize;
+
     //Allocate memory for the structure (according to CERT C Coding Standard)
-    array->array = (uint16_t *) malloc(sizeof(uint16_t) * *arraySize);
+    array->array = (uint16_t *) calloc(array->size, BYTESIZE_INT16);
 
     //Memory allocation verification
     if (array->array == NULL)
     {
         exit(EXIT_FAILURE);
-    }
-
-    //Initialize the structure
-    array->size = *arraySize;
-
-    numberOfElements positionCounter = 0;
-
-    for (positionCounter = 0 ; positionCounter < *arraySize ; positionCounter++)
-    {
-        array->array[positionCounter] = 0;
     }
 }
 
-void initializeUInt32Array(const numberOfElements *arraySize, uint32Array *array)
+inline void initializeUInt32Array(const numberOfElements *arraySize, uint32Array *array)
 {
+    //Initialize the structure
+    array->size = *arraySize;
+
     //Allocate memory for the structure (according to CERT C Coding Standard)
-    array->array = (uint32_t *) malloc(sizeof(uint32_t) * *arraySize);
+    array->array = (uint32_t *) calloc(array->size, BYTESIZE_INT32);
 
     //Memory allocation verification
     if (array->array == NULL)
     {
         exit(EXIT_FAILURE);
-    }
-
-    //Initialize the structure
-    array->size = *arraySize;
-
-    numberOfElements positionCounter = 0;
-
-    for (positionCounter = 0 ; positionCounter < *arraySize ; positionCounter++)
-    {
-        array->array[positionCounter] = 0;
     }
 }
 
-void initializeUInt64Array(const numberOfElements *arraySize, uint64Array *array)
+inline void initializeUInt64Array(const numberOfElements *arraySize, uint64Array *array)
 {
+    //Initialize the structure
+    array->size = *arraySize;
+
     //Allocate memory for the structure (according to CERT C Coding Standard)
-    array->array = (uint64_t *) malloc(sizeof(uint64_t) * *arraySize);
+    array->array = (uint64_t *) calloc(array->size, BYTESIZE_INT8);
 
     //Memory allocation verification
     if (array->array == NULL)
     {
         exit(EXIT_FAILURE);
-    }
-
-    //Initialize the structure
-    array->size = *arraySize;
-
-    numberOfElements positionCounter = 0;
-
-    for (positionCounter = 0 ; positionCounter < *arraySize ; positionCounter++)
-    {
-        array->array[positionCounter] = 0;
     }
 }
 
 
 //Initialize Float Array
 
-void initializeFloatArray(const numberOfElements *arraySize, floatArray *array)
+inline void initializeFloatArray(const numberOfElements *arraySize, floatArray *array)
 {
+    //Initialize the structure
+    array->size = *arraySize;
+
     //Allocate memory for the structure (according to CERT C Coding Standard)
-    array->array = (float *) malloc(sizeof(float) * *arraySize);
+    array->array = (float *) calloc(array->size, BYTESIZE_FLOAT);
 
     //Memory allocation verification
     if (array->array == NULL)
     {
         exit(EXIT_FAILURE);
-    }
-
-    //Initialize the structure
-    array->size = *arraySize;
-
-    numberOfElements positionCounter = 0;
-
-    for (positionCounter = 0 ; positionCounter < *arraySize ; positionCounter++)
-    {
-        array->array[positionCounter] = 0;
     }
 }
 
-void initializeDoubleArray(const numberOfElements *arraySize, doubleArray *array)
+inline void initializeDoubleArray(const numberOfElements *arraySize, doubleArray *array)
 {
+    //Initialize the structure
+    array->size = *arraySize;
+
     //Allocate memory for the structure (according to CERT C Coding Standard)
-    array->array = (double *) malloc(sizeof(double) * *arraySize);
+    array->array = (double *) calloc(array->size, BYTESIZE_DOUBLE);
 
     //Memory allocation verification
     if (array->array == NULL)
     {
         exit(EXIT_FAILURE);
     }
+}
 
-    //Initialize the structure
-    array->size = *arraySize;
 
-    numberOfElements positionCounter = 0;
 
-    for (positionCounter = 0 ; positionCounter < *arraySize ; positionCounter++)
+//Print Int Array
+
+void printInt8Array(int8Array *arrayToPrint)
+{
+    numberOfElements positionCounter;
+    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter)
     {
-        array->array[positionCounter] = 0;
+        printf(" %i", arrayToPrint->array[positionCounter]);
+    }
+}
+
+void printInt16Array(int16Array *arrayToPrint)
+{
+    numberOfElements positionCounter;
+    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter)
+    {
+        printf(" %i", arrayToPrint->array[positionCounter]);
+    }
+}
+
+void printInt32Array(int32Array *arrayToPrint)
+{
+    numberOfElements positionCounter;
+    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter)
+    {
+        printf(" %li", arrayToPrint->array[positionCounter]);
+    }
+}
+
+void printInt64Array(int64Array *arrayToPrint)
+{
+    numberOfElements positionCounter;
+    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter)
+    {
+        printf(" %lli", arrayToPrint->array[positionCounter]);
+    }
+}
+
+//Print Unsigned Int Array
+
+void printUInt8Array(uint8Array *arrayToPrint)
+{
+    numberOfElements positionCounter;
+    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter)
+    {
+        printf(" %u", arrayToPrint->array[positionCounter]);
+    }
+}
+
+void printUInt16Array(uint16Array *arrayToPrint)
+{
+    numberOfElements positionCounter;
+    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter)
+    {
+        printf(" %u", arrayToPrint->array[positionCounter]);
+    }
+}
+
+void printUInt32Array(uint32Array *arrayToPrint)
+{
+    numberOfElements positionCounter;
+    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter)
+    {
+        printf(" %lu", arrayToPrint->array[positionCounter]);
+    }
+}
+
+void printUInt64Array(uint64Array *arrayToPrint)
+{
+    numberOfElements positionCounter;
+    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter)
+    {
+        printf(" %llu", arrayToPrint->array[positionCounter]);
+    }
+}
+
+//Print Float Array
+
+void printFloatArray(floatArray *arrayToPrint)
+{
+    numberOfElements positionCounter;
+    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter)
+    {
+        printf(" %f", arrayToPrint->array[positionCounter]);
+    }
+}
+
+void printDoubleArray(doubleArray *arrayToPrint)
+{
+    numberOfElements positionCounter;
+    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter)
+    {
+        printf(" %lf", arrayToPrint->array[positionCounter]);
     }
 }
 
@@ -1034,7 +1062,7 @@ void writeUInt64Array(const uint64Array *arrayToWrite)
 void writeFloatArray(const floatArray *arrayToWrite)
 {
     //Size verification
-    if (arrayToWrite->size > (SIZE_MAX / __SIZEOF_FLOAT__))
+    if (arrayToWrite->size > (SIZE_MAX / BYTESIZE_FLOAT))
     {
         fprintf(stderr, "Error in writeFloatArray : array is too big to be written.\n");
     }
@@ -1079,7 +1107,7 @@ void writeFloatArray(const floatArray *arrayToWrite)
         }
 
         //Write the array
-        if(fwrite(arrayToWrite->array, __SIZEOF_FLOAT__, arrayToWrite->size, arrayFile) != arrayToWrite->size)
+        if(fwrite(arrayToWrite->array, BYTESIZE_FLOAT, arrayToWrite->size, arrayFile) != arrayToWrite->size)
         {
             /* Handle error */
             fprintf(stderr, "Error in writeFloatArray (fwrite) : %s\n", strerror(errno));
@@ -1101,7 +1129,7 @@ void writeFloatArray(const floatArray *arrayToWrite)
 void writeDoubleArray(const doubleArray *arrayToWrite)
 {
     //Size verification
-    if (arrayToWrite->size > (SIZE_MAX / __SIZEOF_DOUBLE__))
+    if (arrayToWrite->size > (SIZE_MAX / BYTESIZE_DOUBLE))
     {
         fprintf(stderr, "Error in writeDoubleArray : array is too big to be written.\n");
     }
@@ -1146,7 +1174,7 @@ void writeDoubleArray(const doubleArray *arrayToWrite)
         }
 
         //Write the array
-        if(fwrite(arrayToWrite->array, __SIZEOF_DOUBLE__, arrayToWrite->size, arrayFile) != arrayToWrite->size)
+        if(fwrite(arrayToWrite->array, BYTESIZE_DOUBLE, arrayToWrite->size, arrayFile) != arrayToWrite->size)
         {
             /* Handle error */
             fprintf(stderr, "Error in writeDoubleArray (fwrite) : %s\n", strerror(errno));
@@ -1597,7 +1625,7 @@ void openFloatArray(const char *filename, floatArray *arrayOpened)
         initializeFloatArray(&arraySize, arrayOpened);
 
         //Read the array
-        if(fread(arrayOpened->array, __SIZEOF_FLOAT__, arrayOpened->size, arrayFile) != arrayOpened->size)
+        if(fread(arrayOpened->array, BYTESIZE_FLOAT, arrayOpened->size, arrayFile) != arrayOpened->size)
         {
             /* Handle error */
             fprintf(stderr, "Error in openFloatArray (fread) : %s\n", strerror(errno));
@@ -1646,7 +1674,7 @@ void openDoubleArray(const char *filename, doubleArray *arrayOpened)
         initializeDoubleArray(&arraySize, arrayOpened);
 
         //Read the array
-        if(fread(arrayOpened->array, __SIZEOF_DOUBLE__, arrayOpened->size, arrayFile) != arrayOpened->size)
+        if(fread(arrayOpened->array, BYTESIZE_DOUBLE, arrayOpened->size, arrayFile) != arrayOpened->size)
         {
             /* Handle error */
             fprintf(stderr, "Error in openDoubleArray (fread) : %s\n", strerror(errno));
