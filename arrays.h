@@ -9,7 +9,7 @@
     \details    Header file for array operations such as initialization, saving on hard drive, opening array files, finding the maximum and minimum of a given array and computing arithmetic, geometric and harmonic mean (when possible)
     \author     NMathematician
     \version    1.0
-    \date       2024 09 30
+    \date       2024 09 30 - 2024 11 25
 */
 
 /* Commentaries, tips, remarks, indications ============================ */

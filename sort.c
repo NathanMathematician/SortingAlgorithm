@@ -7,7 +7,7 @@
                 All functions sort arrays in ascending order
     \author     NMathematician
     \version    1.0
-    \date       2024 11 14
+    \date       2024 11 14 - 2024 11 25
 */
 
 /* Commentaries, tips, remarks, indications ============================ */

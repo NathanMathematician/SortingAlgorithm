@@ -9,7 +9,7 @@
     \details    Header file for handling and processing user input (character strings) from CMD
     \author     NMathematician
     \version    1.0
-    \date       2024 09 25
+    \date       2024 09 25 - 2024 11 25
 */
 
 /* Commentaries, tips, remarks, indications ============================ */
