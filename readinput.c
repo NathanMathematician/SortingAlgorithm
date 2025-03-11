@@ -300,7 +300,7 @@ void readUInt8(uint8_t *inputValue)
         if (rangeTest > UINT8_MAX)
         {
             //If the number is too small or too large, loop
-            printf("This number is too small or too large. Enter a value between %i and %i.\n", INT8_MIN, INT8_MAX);
+            printf("This number is too small or too large. Enter a value between 0 and %u.\n", UINT8_MAX);
             success = 0;
         }
         else if (errno == ERANGE)
@@ -363,7 +363,7 @@ void readUInt16(uint16_t *inputValue)
         if (rangeTest > UINT16_MAX)
         {
             //If the number is too small or too large, loop
-            printf("This number is too small or too large. Enter a value between %i and %i.\n", INT16_MIN, INT16_MAX);
+            printf("This number is too small or too large. Enter a value between 0 and %i.\n", UINT16_MAX);
             success = 0;
         }
         else if (errno == ERANGE)

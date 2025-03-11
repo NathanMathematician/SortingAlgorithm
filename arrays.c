@@ -182,7 +182,7 @@ inline void initializeDoubleArray(const numberOfElements *arraySize, doubleArray
 void printInt8Array(int8Array *arrayToPrint)
 {
     numberOfElements positionCounter;
-    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter)
+    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter++)
     {
         printf(" %i", arrayToPrint->array[positionCounter]);
     }
@@ -191,7 +191,7 @@ void printInt8Array(int8Array *arrayToPrint)
 void printInt16Array(int16Array *arrayToPrint)
 {
     numberOfElements positionCounter;
-    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter)
+    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter++)
     {
         printf(" %i", arrayToPrint->array[positionCounter]);
     }
@@ -200,7 +200,7 @@ void printInt16Array(int16Array *arrayToPrint)
 void printInt32Array(int32Array *arrayToPrint)
 {
     numberOfElements positionCounter;
-    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter)
+    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter++)
     {
         printf(" %li", arrayToPrint->array[positionCounter]);
     }
@@ -209,7 +209,7 @@ void printInt32Array(int32Array *arrayToPrint)
 void printInt64Array(int64Array *arrayToPrint)
 {
     numberOfElements positionCounter;
-    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter)
+    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter++)
     {
         printf(" %lli", arrayToPrint->array[positionCounter]);
     }
@@ -220,7 +220,7 @@ void printInt64Array(int64Array *arrayToPrint)
 void printUInt8Array(uint8Array *arrayToPrint)
 {
     numberOfElements positionCounter;
-    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter)
+    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter++)
     {
         printf(" %u", arrayToPrint->array[positionCounter]);
     }
@@ -229,7 +229,7 @@ void printUInt8Array(uint8Array *arrayToPrint)
 void printUInt16Array(uint16Array *arrayToPrint)
 {
     numberOfElements positionCounter;
-    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter)
+    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter++)
     {
         printf(" %u", arrayToPrint->array[positionCounter]);
     }
@@ -238,7 +238,7 @@ void printUInt16Array(uint16Array *arrayToPrint)
 void printUInt32Array(uint32Array *arrayToPrint)
 {
     numberOfElements positionCounter;
-    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter)
+    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter++)
     {
         printf(" %lu", arrayToPrint->array[positionCounter]);
     }
@@ -247,7 +247,7 @@ void printUInt32Array(uint32Array *arrayToPrint)
 void printUInt64Array(uint64Array *arrayToPrint)
 {
     numberOfElements positionCounter;
-    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter)
+    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter++)
     {
         printf(" %llu", arrayToPrint->array[positionCounter]);
     }
@@ -258,7 +258,7 @@ void printUInt64Array(uint64Array *arrayToPrint)
 void printFloatArray(floatArray *arrayToPrint)
 {
     numberOfElements positionCounter;
-    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter)
+    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter++)
     {
         printf(" %f", arrayToPrint->array[positionCounter]);
     }
@@ -267,7 +267,7 @@ void printFloatArray(floatArray *arrayToPrint)
 void printDoubleArray(doubleArray *arrayToPrint)
 {
     numberOfElements positionCounter;
-    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter)
+    for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter++)
     {
         printf(" %lf", arrayToPrint->array[positionCounter]);
     }
@@ -596,7 +596,7 @@ void writeInt16Array(const int16Array *arrayToWrite)
         printf("What is the file name? (31 characters MAX)\n");
 
         char filename[64] = {0};
-        int16_t success = 0;
+        int8_t success = 0;
         FILE *arrayFile = NULL;
 
         do
@@ -663,7 +663,7 @@ void writeInt32Array(const int32Array *arrayToWrite)
         printf("What is the file name? (31 characters MAX)\n");
 
         char filename[64] = {0};
-        int32_t success = 0;
+        int8_t success = 0;
         FILE *arrayFile = NULL;
 
         do
@@ -730,7 +730,7 @@ void writeInt64Array(const int64Array *arrayToWrite)
         printf("What is the file name? (31 characters MAX)\n");
 
         char filename[64] = {0};
-        int64_t success = 0;
+        int8_t success = 0;
         FILE *arrayFile = NULL;
 
         do
@@ -799,7 +799,7 @@ void writeUInt8Array(const uint8Array *arrayToWrite)
         printf("What is the file name? (31 characters MAX)\n");
 
         char filename[64] = {0};
-        uint8_t success = 0;
+        int8_t success = 0;
         FILE *arrayFile = NULL;
 
         do
@@ -866,7 +866,7 @@ void writeUInt16Array(const uint16Array *arrayToWrite)
         printf("What is the file name? (31 characters MAX)\n");
 
         char filename[64] = {0};
-        uint16_t success = 0;
+        int8_t success = 0;
         FILE *arrayFile = NULL;
 
         do
@@ -933,7 +933,7 @@ void writeUInt32Array(const uint32Array *arrayToWrite)
         printf("What is the file name? (31 characters MAX)\n");
 
         char filename[64] = {0};
-        uint32_t success = 0;
+        int8_t success = 0;
         FILE *arrayFile = NULL;
 
         do
@@ -1000,7 +1000,7 @@ void writeUInt64Array(const uint64Array *arrayToWrite)
         printf("What is the file name? (31 characters MAX)\n");
 
         char filename[64] = {0};
-        uint64_t success = 0;
+        int8_t success = 0;
         FILE *arrayFile = NULL;
 
         do
@@ -1069,7 +1069,7 @@ void writeFloatArray(const floatArray *arrayToWrite)
         printf("What is the file name? (31 characters MAX)\n");
 
         char filename[64] = {0};
-        float success = 0;
+        int8_t success = 0;
         FILE *arrayFile = NULL;
 
         do
@@ -1136,7 +1136,7 @@ void writeDoubleArray(const doubleArray *arrayToWrite)
         printf("What is the file name? (31 characters MAX)\n");
 
         char filename[64] = {0};
-        double success = 0;
+        int8_t success = 0;
         FILE *arrayFile = NULL;
 
         do
@@ -1686,6 +1686,2054 @@ void openDoubleArray(const char *filename, doubleArray *arrayOpened)
         if (fclose(arrayFile) == EOF)
         {
             fprintf(stderr, "Error in openDoubleArray (fclose) : %s\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+
+
+//Write Array as TXT File
+
+//Write Int Array TXT File
+
+void writeTXTInt8Array(const int8Array *arrayToWrite)
+{
+    //Size verification
+    if (arrayToWrite->size > (SIZE_MAX / BYTESIZE_INT8))
+    {
+        fprintf(stderr, "Error in writeTXTInt8Array : array is too big to be written.\n");
+    }
+    else
+    {
+        printf("What is the file name? (31 characters MAX)\n");
+
+        char filename[64] = {0};
+        int8_t success = 0;
+        FILE *arrayFile = NULL;
+
+        do
+        {
+            readFileName(filename);
+            
+            strncat(filename, ".txt", 10);
+
+            errno = 0;
+            
+            //Open a new file for writing, fails if the file exists
+            arrayFile = fopen(filename, "w");
+            if (NULL == arrayFile)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in writeTXTInt8Array (fopen) : %s.\n", strerror(errno));
+                printf("Try another name for the file.\n");
+                success = 0;
+            }
+            else
+            {
+                success = 1;
+            }
+        }while(success != 1); //Repeat until the file is opened
+
+        /* Write to file */
+        //Write the size
+        if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in writeTXTInt8Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
+        //Write the array
+        numberOfElements arrayCounter;
+        for (arrayCounter = 0 ; arrayCounter < arrayToWrite->size ; arrayCounter++)
+        {
+            if(fprintf(arrayFile, "%i\n", arrayToWrite->array[arrayCounter]) == EOF)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in writeTXTInt8Array (fprintf) : %s\n", strerror(errno));
+                exit(EXIT_FAILURE);
+            }
+        }
+
+        printf("File successfully written!\n");
+        
+        if (fclose(arrayFile) == EOF)
+        {
+            fprintf(stderr, "Error in writeTXTInt8Array (fclose) : %s\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+void writeTXTInt16Array(const int16Array *arrayToWrite)
+{
+    //Size verification
+    if (arrayToWrite->size > (SIZE_MAX / BYTESIZE_INT16))
+    {
+        fprintf(stderr, "Error in writeTXTInt16Array : array is too big to be written.\n");
+    }
+    else
+    {
+        printf("What is the file name? (31 characters MAX)\n");
+
+        char filename[64] = {0};
+        int8_t success = 0;
+        FILE *arrayFile = NULL;
+
+        do
+        {
+            readFileName(filename);
+            
+            strncat(filename, ".txt", 10);
+
+            errno = 0;
+            
+            //Open a new file for writing, fails if the file exists
+            arrayFile = fopen(filename, "w");
+            if (NULL == arrayFile)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in writeTXTInt16Array (fopen) : %s.\n", strerror(errno));
+                printf("Try another name for the file.\n");
+                success = 0;
+            }
+            else
+            {
+                success = 1;
+            }
+        }while(success != 1); //Repeat until the file is opened
+
+        /* Write to file */
+        //Write the size
+        if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in writeTXTInt16Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
+        //Write the array
+        numberOfElements arrayCounter;
+        for (arrayCounter = 0 ; arrayCounter < arrayToWrite->size ; arrayCounter++)
+        {
+            if(fprintf(arrayFile, "%i\n", arrayToWrite->array[arrayCounter]) == EOF)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in writeTXTInt16Array (fprintf) : %s\n", strerror(errno));
+                exit(EXIT_FAILURE);
+            }
+        }
+        
+        printf("File successfully written!\n");
+        
+        if (fclose(arrayFile) == EOF)
+        {
+            fprintf(stderr, "Error in writeTXTInt16Array (fclose) : %s\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+void writeTXTInt32Array(const int32Array *arrayToWrite)
+{
+    //Size verification
+    if (arrayToWrite->size > (SIZE_MAX / BYTESIZE_INT32))
+    {
+        fprintf(stderr, "Error in writeTXTInt32Array : array is too big to be written.\n");
+    }
+    else
+    {
+        printf("What is the file name? (31 characters MAX)\n");
+
+        char filename[64] = {0};
+        int8_t success = 0;
+        FILE *arrayFile = NULL;
+
+        do
+        {
+            readFileName(filename);
+            
+            strncat(filename, ".txt", 10);
+
+            errno = 0;
+            
+            //Open a new file for writing, fails if the file exists
+            arrayFile = fopen(filename, "w");
+            if (NULL == arrayFile)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in writeTXTInt32Array (fopen) : %s.\n", strerror(errno));
+                printf("Try another name for the file.\n");
+                success = 0;
+            }
+            else
+            {
+                success = 1;
+            }
+        }while(success != 1); //Repeat until the file is opened
+
+        /* Write to file */
+        //Write the size
+        if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in writeTXTInt32Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
+        //Write the array
+        numberOfElements arrayCounter;
+        for (arrayCounter = 0 ; arrayCounter < arrayToWrite->size ; arrayCounter++)
+        {
+            if(fprintf(arrayFile, "%li\n", arrayToWrite->array[arrayCounter]) == EOF)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in writeTXTInt32Array (fprintf) : %s\n", strerror(errno));
+                exit(EXIT_FAILURE);
+            }
+        }
+        
+        printf("File successfully written!\n");
+        
+        if (fclose(arrayFile) == EOF)
+        {
+            fprintf(stderr, "Error in writeTXTInt32Array (fclose) : %s\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+void writeTXTInt64Array(const int64Array *arrayToWrite)
+{
+    //Size verification
+    if (arrayToWrite->size > (SIZE_MAX / BYTESIZE_INT64))
+    {
+        fprintf(stderr, "Error in writeTXTInt64Array : array is too big to be written.\n");
+    }
+    else
+    {
+        printf("What is the file name? (31 characters MAX)\n");
+
+        char filename[64] = {0};
+        int8_t success = 0;
+        FILE *arrayFile = NULL;
+
+        do
+        {
+            readFileName(filename);
+            
+            strncat(filename, ".txt", 10);
+
+            errno = 0;
+            
+            //Open a new file for writing, fails if the file exists
+            arrayFile = fopen(filename, "w");
+            if (NULL == arrayFile)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in writeTXTInt64Array (fopen) : %s.\n", strerror(errno));
+                printf("Try another name for the file.\n");
+                success = 0;
+            }
+            else
+            {
+                success = 1;
+            }
+        }while(success != 1); //Repeat until the file is opened
+
+        /* Write to file */
+        //Write the size
+        if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in writeTXTInt64Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
+        //Write the array
+        numberOfElements arrayCounter;
+        for (arrayCounter = 0 ; arrayCounter < arrayToWrite->size ; arrayCounter++)
+        {
+            if(fprintf(arrayFile, "%lli\n", arrayToWrite->array[arrayCounter]) == EOF)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in writeTXTInt64Array (fprintf) : %s\n", strerror(errno));
+                exit(EXIT_FAILURE);
+            }
+        }
+        
+        printf("File successfully written!\n");
+        
+        if (fclose(arrayFile) == EOF)
+        {
+            fprintf(stderr, "Error in writeTXTInt64Array (fclose) : %s\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+//Write Unsigned Int Array TXT File
+
+void writeTXTUInt8Array(const uint8Array *arrayToWrite)
+{
+    //Size verification
+    if (arrayToWrite->size > (SIZE_MAX / BYTESIZE_INT8))
+    {
+        fprintf(stderr, "Error in writeTXTUInt8Array : array is too big to be written.\n");
+    }
+    else
+    {
+        printf("What is the file name? (31 characters MAX)\n");
+
+        char filename[64] = {0};
+        int8_t success = 0;
+        FILE *arrayFile = NULL;
+
+        do
+        {
+            readFileName(filename);
+            
+            strncat(filename, ".txt", 10);
+
+            errno = 0;
+            
+            //Open a new file for writing, fails if the file exists
+            arrayFile = fopen(filename, "w");
+            if (NULL == arrayFile)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in writeTXTUInt8Array (fopen) : %s.\n", strerror(errno));
+                printf("Try another name for the file.\n");
+                success = 0;
+            }
+            else
+            {
+                success = 1;
+            }
+        }while(success != 1); //Repeat until the file is opened
+
+        /* Write to file */
+        //Write the size
+        if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in writeTXTUInt8Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
+        //Write the array
+        numberOfElements arrayCounter;
+        for (arrayCounter = 0 ; arrayCounter < arrayToWrite->size ; arrayCounter++)
+        {
+            if(fprintf(arrayFile, "%u\n", arrayToWrite->array[arrayCounter]) == EOF)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in writeTXTUInt8Array (fprintf) : %s\n", strerror(errno));
+                exit(EXIT_FAILURE);
+            }
+        }
+        
+        printf("File successfully written!\n");
+        
+        if (fclose(arrayFile) == EOF)
+        {
+            fprintf(stderr, "Error in writeUInt8Array (fclose) : %s\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+void writeTXTUInt16Array(const uint16Array *arrayToWrite)
+{
+    //Size verification
+    if (arrayToWrite->size > (SIZE_MAX / BYTESIZE_INT16))
+    {
+        fprintf(stderr, "Error in writeTXTUInt16Array : array is too big to be written.\n");
+    }
+    else
+    {
+        printf("What is the file name? (31 characters MAX)\n");
+
+        char filename[64] = {0};
+        int8_t success = 0;
+        FILE *arrayFile = NULL;
+
+        do
+        {
+            readFileName(filename);
+            
+            strncat(filename, ".txt", 10);
+
+            errno = 0;
+            
+            //Open a new file for writing, fails if the file exists
+            arrayFile = fopen(filename, "w");
+            if (NULL == arrayFile)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in writeTXTUInt16Array (fopen) : %s.\n", strerror(errno));
+                printf("Try another name for the file.\n");
+                success = 0;
+            }
+            else
+            {
+                success = 1;
+            }
+        }while(success != 1); //Repeat until the file is opened
+
+        /* Write to file */
+        //Write the size
+        if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in writeTXTUInt16Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
+        //Write the array
+        numberOfElements arrayCounter;
+        for (arrayCounter = 0 ; arrayCounter < arrayToWrite->size ; arrayCounter++)
+        {
+            if(fprintf(arrayFile, "%u\n", arrayToWrite->array[arrayCounter]) == EOF)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in writeTXTUInt16Array (fprintf) : %s\n", strerror(errno));
+                exit(EXIT_FAILURE);
+            }
+        }
+        
+        printf("File successfully written!\n");
+        
+        if (fclose(arrayFile) == EOF)
+        {
+            fprintf(stderr, "Error in writeTXTUInt16Array (fclose) : %s\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+void writeTXTUInt32Array(const uint32Array *arrayToWrite)
+{
+    //Size verification
+    if (arrayToWrite->size > (SIZE_MAX / BYTESIZE_INT32))
+    {
+        fprintf(stderr, "Error in writeTXTUInt32Array : array is too big to be written.\n");
+    }
+    else
+    {
+        printf("What is the file name? (31 characters MAX)\n");
+
+        char filename[64] = {0};
+        int8_t success = 0;
+        FILE *arrayFile = NULL;
+
+        do
+        {
+            readFileName(filename);
+            
+            strncat(filename, ".txt", 10);
+
+            errno = 0;
+            
+            //Open a new file for writing, fails if the file exists
+            arrayFile = fopen(filename, "w");
+            if (NULL == arrayFile)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in writeTXTUInt32Array (fopen) : %s.\n", strerror(errno));
+                printf("Try another name for the file.\n");
+                success = 0;
+            }
+            else
+            {
+                success = 1;
+            }
+        }while(success != 1); //Repeat until the file is opened
+
+        /* Write to file */
+        //Write the size
+        if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in writeTXTUInt32Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
+        //Write the array
+        numberOfElements arrayCounter;
+        for (arrayCounter = 0 ; arrayCounter < arrayToWrite->size ; arrayCounter++)
+        {
+            if(fprintf(arrayFile, "%lu\n", arrayToWrite->array[arrayCounter]) == EOF)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in writeTXTUInt32Array (fprintf) : %s\n", strerror(errno));
+                exit(EXIT_FAILURE);
+            }
+        }
+        
+        printf("File successfully written!\n");
+        
+        if (fclose(arrayFile) == EOF)
+        {
+            fprintf(stderr, "Error in writeTXTUInt32Array (fclose) : %s\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+void writeTXTUInt64Array(const uint64Array *arrayToWrite)
+{
+    //Size verification
+    if (arrayToWrite->size > (SIZE_MAX / BYTESIZE_INT64))
+    {
+        fprintf(stderr, "Error in writeTXTUInt64Array : array is too big to be written.\n");
+    }
+    else
+    {
+        printf("What is the file name? (31 characters MAX)\n");
+
+        char filename[64] = {0};
+        int8_t success = 0;
+        FILE *arrayFile = NULL;
+
+        do
+        {
+            readFileName(filename);
+            
+            strncat(filename, ".txt", 10);
+
+            errno = 0;
+            
+            //Open a new file for writing, fails if the file exists
+            arrayFile = fopen(filename, "w");
+            if (NULL == arrayFile)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in writeTXTUInt64Array (fopen) : %s.\n", strerror(errno));
+                printf("Try another name for the file.\n");
+                success = 0;
+            }
+            else
+            {
+                success = 1;
+            }
+        }while(success != 1); //Repeat until the file is opened
+
+        /* Write to file */
+        //Write the size
+        if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in writeTXTUInt64Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
+        //Write the array
+        numberOfElements arrayCounter;
+        for (arrayCounter = 0 ; arrayCounter < arrayToWrite->size ; arrayCounter++)
+        {
+            if(fprintf(arrayFile, "%llu\n", arrayToWrite->array[arrayCounter]) == EOF)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in writeTXTUInt64Array (fprintf) : %s\n", strerror(errno));
+                exit(EXIT_FAILURE);
+            }
+        }
+        
+        printf("File successfully written!\n");
+        
+        if (fclose(arrayFile) == EOF)
+        {
+            fprintf(stderr, "Error in writeTXTUInt64Array (fclose) : %s\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+//Write Float Array TXT File
+
+void writeTXTFloatArray(const floatArray *arrayToWrite)
+{
+    //Size verification
+    if (arrayToWrite->size > (SIZE_MAX / BYTESIZE_FLOAT))
+    {
+        fprintf(stderr, "Error in writeTXTFloatArray : array is too big to be written.\n");
+    }
+    else
+    {
+        printf("What is the file name? (31 characters MAX)\n");
+
+        char filename[64] = {0};
+        int8_t success = 0;
+        FILE *arrayFile = NULL;
+
+        do
+        {
+            readFileName(filename);
+            
+            strncat(filename, ".txt", 10);
+
+            errno = 0;
+            
+            //Open a new file for writing, fails if the file exists
+            arrayFile = fopen(filename, "w");
+            if (NULL == arrayFile)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in writeTXTFloatArray (fopen) : %s.\n", strerror(errno));
+                printf("Try another name for the file.\n");
+                success = 0;
+            }
+            else
+            {
+                success = 1;
+            }
+        }while(success != 1); //Repeat until the file is opened
+
+        /* Write to file */
+        //Write the size
+        if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in writeTXTFloatArray (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
+        //Write the array
+        numberOfElements arrayCounter;
+        for (arrayCounter = 0 ; arrayCounter < arrayToWrite->size ; arrayCounter++)
+        {
+            if(fprintf(arrayFile, "%f\n", arrayToWrite->array[arrayCounter]) == EOF)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in writeTXTFloatArray (fprintf) : %s\n", strerror(errno));
+                exit(EXIT_FAILURE);
+            }
+        }
+        
+        printf("File successfully written!\n");
+        
+        if (fclose(arrayFile) == EOF)
+        {
+            fprintf(stderr, "Error in writeTXTFloatArray (fclose) : %s\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+void writeTXTDoubleArray(const doubleArray *arrayToWrite)
+{
+    //Size verification
+    if (arrayToWrite->size > (SIZE_MAX / BYTESIZE_DOUBLE))
+    {
+        fprintf(stderr, "Error in writeTXTDoubleArray : array is too big to be written.\n");
+    }
+    else
+    {
+        printf("What is the file name? (31 characters MAX)\n");
+
+        char filename[64] = {0};
+        int8_t success = 0;
+        FILE *arrayFile = NULL;
+
+        do
+        {
+            readFileName(filename);
+            
+            strncat(filename, ".txt", 10);
+
+            errno = 0;
+            
+            //Open a new file for writing, fails if the file exists
+            arrayFile = fopen(filename, "w");
+            if (NULL == arrayFile)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in writeTXTDoubleArray (fopen) : %s.\n", strerror(errno));
+                printf("Try another name for the file.\n");
+                success = 0;
+            }
+            else
+            {
+                success = 1;
+            }
+        }while(success != 1); //Repeat until the file is opened
+
+        /* Write to file */
+        //Write the size
+        if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in writeTXTDoubleArray (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
+        //Write the array
+        numberOfElements arrayCounter;
+        for (arrayCounter = 0 ; arrayCounter < arrayToWrite->size ; arrayCounter++)
+        {
+            if(fprintf(arrayFile, "%lf\n", arrayToWrite->array[arrayCounter]) == EOF)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in writeTXTDoubleArray (fprintf) : %s\n", strerror(errno));
+                exit(EXIT_FAILURE);
+            }
+        }
+        
+        printf("File successfully written!\n");
+        
+        if (fclose(arrayFile) == EOF)
+        {
+            fprintf(stderr, "Error in writeTXTDoubleArray (fclose) : %s\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+
+
+//Open Array as TXT File
+
+//Open Int Array TXT
+
+void openTXTInt8Array(const char *filename, int8Array *arrayOpened)
+{
+    char *bufferString = calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
+    if (bufferString == NULL)
+    {
+        //Allocation verification
+        fprintf(stderr, "Error in openTXTInt8Array (calloc) : %s.\n", strerror(errno));
+        exit(EXIT_FAILURE);
+    }
+
+    int32_t rangeTest;
+
+    FILE *arrayFile = NULL;
+
+    errno = 0;
+    
+    //Open a new file for reading, fails if the file does not exist
+    arrayFile = fopen(filename, "r");
+    if (NULL == arrayFile)
+    {
+        /* Handle error */
+        fprintf(stderr, "Error in openTXTInt8Array (fopen) : %s.\n", strerror(errno));
+    }
+    else
+    {
+        /* Read from file */
+        //Read the size
+        numberOfElements arraySize = 0;
+
+        if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in openTXTInt8Array (fgets) : %s\nCannot read arraySize from arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
+        //Helps to check the input
+        char *endptr = NULL;
+
+        //Reset error number
+        errno = 0;
+
+        //Convert input
+        arraySize = strtoull(bufferString, &endptr, 10);
+
+        if (errno == ERANGE)
+        {
+            //If the number is too small or too large, loop
+            printf("This number is too small or too large.\n");
+            fprintf(stderr, "Error in openTXTInt8Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else if (endptr == bufferString)
+        {
+            //If no character was read, loop
+            printf("No character was read, enter a valid number.\n");
+            fprintf(stderr, "Error in openTXTInt8Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else if (*endptr != '\0' && *endptr != '\n')
+        {
+            //If *endptr is neither end of string nor newline,
+            //the *whole* input was not converted, loop
+            printf("The whole input was not converted, enter a valid number.\n");
+            fprintf(stderr, "Error in openTXTInt8Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else
+        {
+            //Initialize array
+            initializeInt8Array(&arraySize, arrayOpened);
+        }
+        
+        //Read the array
+        numberOfElements arrayCounter;
+        for (arrayCounter = 0; arrayCounter < arrayOpened->size ; arrayCounter++)
+        {
+            if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in openTXTInt8Array (fgets) : %s\nCannot read array element from arrayFile.\n", strerror(errno));
+                exit(EXIT_FAILURE);
+            }
+
+            //Reset endptr
+            endptr = NULL;
+
+            //Reset error number
+            errno = 0;
+
+            //Convert input
+            rangeTest = strtol(bufferString, &endptr, 10);
+
+            if (rangeTest < INT8_MIN || rangeTest > INT8_MAX)
+            {
+                //If the number is too small or too large, loop
+                printf("This number is too small or too large. Enter a value between %i and %i.\n", INT8_MIN, INT8_MAX);
+                fprintf(stderr, "Error in openTXTInt8Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (errno == ERANGE)
+            {
+                //If the number is too small or too large, loop
+                printf("This number is too small or too large.\n");
+                fprintf(stderr, "Error in openTXTInt8Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (endptr == bufferString)
+            {
+                //If no character was read, loop
+                printf("No character was read, enter a valid number.\n");
+                fprintf(stderr, "Error in openTXTInt8Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (*endptr != '\0' && *endptr != '\n')
+            {
+                //If *endptr is neither end of string nor newline,
+                //the *whole* input was not converted, loop
+                printf("The whole input was not converted, enter a valid number.\n");
+                fprintf(stderr, "Error in openTXTInt8Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else
+            {
+                arrayOpened->array[arrayCounter] = (int8_t) rangeTest;
+            }
+        }
+            
+        printf("File successfully read!\n");
+        
+        if (fclose(arrayFile) == EOF)
+        {
+            fprintf(stderr, "Error in openTXTInt8Array (fclose) : %s\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+void openTXTInt16Array(const char *filename, int16Array *arrayOpened)
+{
+    char *bufferString = calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
+    if (bufferString == NULL)
+    {
+        //Allocation verification
+        fprintf(stderr, "Error in openTXTInt16Array (calloc) : %s.\n", strerror(errno));
+        exit(EXIT_FAILURE);
+    }
+
+    int64_t rangeTest;
+
+    FILE *arrayFile = NULL;
+
+    errno = 0;
+    
+    //Open a new file for reading, fails if the file does not exist
+    arrayFile = fopen(filename, "r");
+    if (NULL == arrayFile)
+    {
+        /* Handle error */
+        fprintf(stderr, "Error in openTXTInt16Array (fopen) : %s.\n", strerror(errno));
+    }
+    else
+    {
+        /* Read from file */
+        //Read the size
+        numberOfElements arraySize = 0;
+
+        if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in openTXTInt16Array (fgets) : %s\nCannot read arraySize from arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
+        //Helps to check the input
+        char *endptr = NULL;
+
+        //Reset error number
+        errno = 0;
+
+        //Convert input
+        arraySize = strtoull(bufferString, &endptr, 10);
+
+        if (errno == ERANGE)
+        {
+            //If the number is too small or too large, loop
+            printf("This number is too small or too large.\n");
+            fprintf(stderr, "Error in openTXTInt16Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else if (endptr == bufferString)
+        {
+            //If no character was read, loop
+            printf("No character was read, enter a valid number.\n");
+            fprintf(stderr, "Error in openTXTInt16Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else if (*endptr != '\0' && *endptr != '\n')
+        {
+            //If *endptr is neither end of string nor newline,
+            //the *whole* input was not converted, loop
+            printf("The whole input was not converted, enter a valid number.\n");
+            fprintf(stderr, "Error in openTXTInt16Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else
+        {
+            //Initialize array
+            initializeInt16Array(&arraySize, arrayOpened);
+        }
+        
+        //Read the array
+        numberOfElements arrayCounter;
+        for (arrayCounter = 0; arrayCounter < arrayOpened->size ; arrayCounter++)
+        {
+            if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in openTXTInt16Array (fgets) : %s\nCannot read array element from arrayFile.\n", strerror(errno));
+                exit(EXIT_FAILURE);
+            }
+
+            //Reset endptr
+            endptr = NULL;
+
+            //Reset error number
+            errno = 0;
+
+            //Convert input
+            rangeTest = strtol(bufferString, &endptr, 10);
+
+            if (rangeTest < INT16_MIN || rangeTest > INT16_MAX)
+            {
+                //If the number is too small or too large, loop
+                printf("This number is too small or too large. Enter a value between %i and %i.\n", INT16_MIN, INT16_MAX);
+                fprintf(stderr, "Error in openTXTInt16Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (errno == ERANGE)
+            {
+                //If the number is too small or too large, loop
+                printf("This number is too small or too large.\n");
+                fprintf(stderr, "Error in openTXTInt16Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (endptr == bufferString)
+            {
+                //If no character was read, loop
+                printf("No character was read, enter a valid number.\n");
+                fprintf(stderr, "Error in openTXTInt16Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (*endptr != '\0' && *endptr != '\n')
+            {
+                //If *endptr is neither end of string nor newline,
+                //the *whole* input was not converted, loop
+                printf("The whole input was not converted, enter a valid number.\n");
+                fprintf(stderr, "Error in openTXTInt16Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else
+            {
+                arrayOpened->array[arrayCounter] = (int16_t) rangeTest;
+            }
+        }
+            
+        printf("File successfully read!\n");
+        
+        if (fclose(arrayFile) == EOF)
+        {
+            fprintf(stderr, "Error in openTXTInt16Array (fclose) : %s\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+void openTXTInt32Array(const char *filename, int32Array *arrayOpened)
+{
+    char *bufferString = calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
+    if (bufferString == NULL)
+    {
+        //Allocation verification
+        fprintf(stderr, "Error in openTXTInt32Array (calloc) : %s.\n", strerror(errno));
+        exit(EXIT_FAILURE);
+    }
+
+    int32_t rangeTest;
+
+    FILE *arrayFile = NULL;
+
+    errno = 0;
+    
+    //Open a new file for reading, fails if the file does not exist
+    arrayFile = fopen(filename, "r");
+    if (NULL == arrayFile)
+    {
+        /* Handle error */
+        fprintf(stderr, "Error in openTXTInt32Array (fopen) : %s.\n", strerror(errno));
+    }
+    else
+    {
+        /* Read from file */
+        //Read the size
+        numberOfElements arraySize = 0;
+
+        if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in openTXTInt32Array (fgets) : %s\nCannot read arraySize from arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
+        //Helps to check the input
+        char *endptr = NULL;
+
+        //Reset error number
+        errno = 0;
+
+        //Convert input
+        arraySize = strtoull(bufferString, &endptr, 10);
+
+        if (errno == ERANGE)
+        {
+            //If the number is too small or too large, loop
+            printf("This number is too small or too large.\n");
+            fprintf(stderr, "Error in openTXTInt32Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else if (endptr == bufferString)
+        {
+            //If no character was read, loop
+            printf("No character was read, enter a valid number.\n");
+            fprintf(stderr, "Error in openTXTInt32Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else if (*endptr != '\0' && *endptr != '\n')
+        {
+            //If *endptr is neither end of string nor newline,
+            //the *whole* input was not converted, loop
+            printf("The whole input was not converted, enter a valid number.\n");
+            fprintf(stderr, "Error in openTXTInt32Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else
+        {
+            //Initialize array
+            initializeInt32Array(&arraySize, arrayOpened);
+        }
+        
+        //Read the array
+        numberOfElements arrayCounter;
+        for (arrayCounter = 0; arrayCounter < arrayOpened->size ; arrayCounter++)
+        {
+            if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in openTXTInt32Array (fgets) : %s\nCannot read array element from arrayFile.\n", strerror(errno));
+                exit(EXIT_FAILURE);
+            }
+
+            //Reset endptr
+            endptr = NULL;
+
+            //Reset error number
+            errno = 0;
+
+            //Convert input
+            rangeTest = strtol(bufferString, &endptr, 10);
+
+            if (errno == ERANGE)
+            {
+                //If the number is too small or too large, loop
+                printf("This number is too small or too large.\n");
+                fprintf(stderr, "Error in openTXTInt32Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (endptr == bufferString)
+            {
+                //If no character was read, loop
+                printf("No character was read, enter a valid number.\n");
+                fprintf(stderr, "Error in openTXTInt32Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (*endptr != '\0' && *endptr != '\n')
+            {
+                //If *endptr is neither end of string nor newline,
+                //the *whole* input was not converted, loop
+                printf("The whole input was not converted, enter a valid number.\n");
+                fprintf(stderr, "Error in openTXTInt32Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else
+            {
+                arrayOpened->array[arrayCounter] = rangeTest;
+            }
+        }
+            
+        printf("File successfully read!\n");
+        
+        if (fclose(arrayFile) == EOF)
+        {
+            fprintf(stderr, "Error in openTXTInt32Array (fclose) : %s\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+void openTXTInt64Array(const char *filename, int64Array *arrayOpened)
+{
+    char *bufferString = calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
+    if (bufferString == NULL)
+    {
+        //Allocation verification
+        fprintf(stderr, "Error in openTXTInt64Array (calloc) : %s.\n", strerror(errno));
+        exit(EXIT_FAILURE);
+    }
+
+    int64_t rangeTest;
+
+    FILE *arrayFile = NULL;
+
+    errno = 0;
+    
+    //Open a new file for reading, fails if the file does not exist
+    arrayFile = fopen(filename, "r");
+    if (NULL == arrayFile)
+    {
+        /* Handle error */
+        fprintf(stderr, "Error in openTXTInt64Array (fopen) : %s.\n", strerror(errno));
+    }
+    else
+    {
+        /* Read from file */
+        //Read the size
+        numberOfElements arraySize = 0;
+
+        if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in openTXTInt64Array (fgets) : %s\nCannot read arraySize from arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
+        //Helps to check the input
+        char *endptr = NULL;
+
+        //Reset error number
+        errno = 0;
+
+        //Convert input
+        arraySize = strtoull(bufferString, &endptr, 10);
+
+        if (errno == ERANGE)
+        {
+            //If the number is too small or too large, loop
+            printf("This number is too small or too large.\n");
+            fprintf(stderr, "Error in openTXTInt64Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else if (endptr == bufferString)
+        {
+            //If no character was read, loop
+            printf("No character was read, enter a valid number.\n");
+            fprintf(stderr, "Error in openTXTInt64Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else if (*endptr != '\0' && *endptr != '\n')
+        {
+            //If *endptr is neither end of string nor newline,
+            //the *whole* input was not converted, loop
+            printf("The whole input was not converted, enter a valid number.\n");
+            fprintf(stderr, "Error in openTXTInt64Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else
+        {
+            //Initialize array
+            initializeInt64Array(&arraySize, arrayOpened);
+        }
+        
+        //Read the array
+        numberOfElements arrayCounter;
+        for (arrayCounter = 0; arrayCounter < arrayOpened->size ; arrayCounter++)
+        {
+            if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in openTXTInt64Array (fgets) : %s\nCannot read array element from arrayFile.\n", strerror(errno));
+                exit(EXIT_FAILURE);
+            }
+
+            //Reset endptr
+            endptr = NULL;
+
+            //Reset error number
+            errno = 0;
+
+            //Convert input
+            rangeTest = strtol(bufferString, &endptr, 10);
+
+            if (errno == ERANGE)
+            {
+                //If the number is too small or too large, loop
+                printf("This number is too small or too large.\n");
+                fprintf(stderr, "Error in openTXTInt64Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (endptr == bufferString)
+            {
+                //If no character was read, loop
+                printf("No character was read, enter a valid number.\n");
+                fprintf(stderr, "Error in openTXTInt64Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (*endptr != '\0' && *endptr != '\n')
+            {
+                //If *endptr is neither end of string nor newline,
+                //the *whole* input was not converted, loop
+                printf("The whole input was not converted, enter a valid number.\n");
+                fprintf(stderr, "Error in openTXTInt64Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else
+            {
+                arrayOpened->array[arrayCounter] = rangeTest;
+            }
+        }
+            
+        printf("File successfully read!\n");
+        
+        if (fclose(arrayFile) == EOF)
+        {
+            fprintf(stderr, "Error in openTXTInt64Array (fclose) : %s\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+//Open Unsigned Int Array TXT File
+
+void openTXTUInt8Array(const char *filename, uint8Array *arrayOpened)
+{
+    char *bufferString = calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
+    if (bufferString == NULL)
+    {
+        //Allocation verification
+        fprintf(stderr, "Error in openTXTUInt8Array (calloc) : %s.\n", strerror(errno));
+        exit(EXIT_FAILURE);
+    }
+
+    uint32_t rangeTest;
+
+    FILE *arrayFile = NULL;
+
+    errno = 0;
+    
+    //Open a new file for reading, fails if the file does not exist
+    arrayFile = fopen(filename, "r");
+    if (NULL == arrayFile)
+    {
+        /* Handle error */
+        fprintf(stderr, "Error in openTXTUInt8Array (fopen) : %s.\n", strerror(errno));
+    }
+    else
+    {
+        /* Read from file */
+        //Read the size
+        numberOfElements arraySize = 0;
+
+        if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in openTXTUInt8Array (fgets) : %s\nCannot read arraySize from arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
+        //Helps to check the input
+        char *endptr = NULL;
+
+        //Reset error number
+        errno = 0;
+
+        //Convert input
+        arraySize = strtoull(bufferString, &endptr, 10);
+
+        if (errno == ERANGE)
+        {
+            //If the number is too small or too large, loop
+            printf("This number is too small or too large.\n");
+            fprintf(stderr, "Error in openTXTUInt8Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else if (endptr == bufferString)
+        {
+            //If no character was read, loop
+            printf("No character was read, enter a valid number.\n");
+            fprintf(stderr, "Error in openTXTUInt8Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else if (*endptr != '\0' && *endptr != '\n')
+        {
+            //If *endptr is neither end of string nor newline,
+            //the *whole* input was not converted, loop
+            printf("The whole input was not converted, enter a valid number.\n");
+            fprintf(stderr, "Error in openTXTUInt8Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else
+        {
+            //Initialize array
+            initializeUInt8Array(&arraySize, arrayOpened);
+        }
+        
+        //Read the array
+        numberOfElements arrayCounter;
+        for (arrayCounter = 0; arrayCounter < arrayOpened->size ; arrayCounter++)
+        {
+            if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in openTXTUInt8Array (fgets) : %s\nCannot read array element from arrayFile.\n", strerror(errno));
+                exit(EXIT_FAILURE);
+            }
+
+            //Reset endptr
+            endptr = NULL;
+
+            //Reset error number
+            errno = 0;
+
+            //Convert input
+            rangeTest = strtoul(bufferString, &endptr, 10);
+
+            if (rangeTest > UINT8_MAX)
+            {
+                //If the number is too small or too large, loop
+                printf("This number is too small or too large. Enter a value between 0 and %i.\n", UINT8_MAX);
+                fprintf(stderr, "Error in openTXTUInt8Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (errno == ERANGE)
+            {
+                //If the number is too small or too large, loop
+                printf("This number is too small or too large.\n");
+                fprintf(stderr, "Error in openTXTUInt8Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (endptr == bufferString)
+            {
+                //If no character was read, loop
+                printf("No character was read, enter a valid number.\n");
+                fprintf(stderr, "Error in openTXTUInt8Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (*endptr != '\0' && *endptr != '\n')
+            {
+                //If *endptr is neither end of string nor newline,
+                //the *whole* input was not converted, loop
+                printf("The whole input was not converted, enter a valid number.\n");
+                fprintf(stderr, "Error in openTXTUInt8Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else
+            {
+                arrayOpened->array[arrayCounter] = (uint8_t) rangeTest;
+            }
+        }
+            
+        printf("File successfully read!\n");
+        
+        if (fclose(arrayFile) == EOF)
+        {
+            fprintf(stderr, "Error in openTXTUInt8Array (fclose) : %s\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+void openTXTUInt16Array(const char *filename, uint16Array *arrayOpened)
+{
+    char *bufferString = calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
+    if (bufferString == NULL)
+    {
+        //Allocation verification
+        fprintf(stderr, "Error in openTXTUInt16Array (calloc) : %s.\n", strerror(errno));
+        exit(EXIT_FAILURE);
+    }
+
+    uint32_t rangeTest;
+
+    FILE *arrayFile = NULL;
+
+    errno = 0;
+    
+    //Open a new file for reading, fails if the file does not exist
+    arrayFile = fopen(filename, "r");
+    if (NULL == arrayFile)
+    {
+        /* Handle error */
+        fprintf(stderr, "Error in openTXTUInt16Array (fopen) : %s.\n", strerror(errno));
+    }
+    else
+    {
+        /* Read from file */
+        //Read the size
+        numberOfElements arraySize = 0;
+
+        if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in openTXTUInt16Array (fgets) : %s\nCannot read arraySize from arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
+        //Helps to check the input
+        char *endptr = NULL;
+
+        //Reset error number
+        errno = 0;
+
+        //Convert input
+        arraySize = strtoull(bufferString, &endptr, 10);
+
+        if (errno == ERANGE)
+        {
+            //If the number is too small or too large, loop
+            printf("This number is too small or too large.\n");
+            fprintf(stderr, "Error in openTXTUInt16Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else if (endptr == bufferString)
+        {
+            //If no character was read, loop
+            printf("No character was read, enter a valid number.\n");
+            fprintf(stderr, "Error in openTXTUInt16Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else if (*endptr != '\0' && *endptr != '\n')
+        {
+            //If *endptr is neither end of string nor newline,
+            //the *whole* input was not converted, loop
+            printf("The whole input was not converted, enter a valid number.\n");
+            fprintf(stderr, "Error in openTXTUInt16Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else
+        {
+            //Initialize array
+            initializeUInt16Array(&arraySize, arrayOpened);
+        }
+        
+        //Read the array
+        numberOfElements arrayCounter;
+        for (arrayCounter = 0; arrayCounter < arrayOpened->size ; arrayCounter++)
+        {
+            if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in openTXTUInt16Array (fgets) : %s\nCannot read array element from arrayFile.\n", strerror(errno));
+                exit(EXIT_FAILURE);
+            }
+
+            //Reset endptr
+            endptr = NULL;
+
+            //Reset error number
+            errno = 0;
+
+            //Convert input
+            rangeTest = strtoul(bufferString, &endptr, 10);
+
+            if (rangeTest > UINT16_MAX)
+            {
+                //If the number is too small or too large, loop
+                printf("This number is too small or too large. Enter a value between 0 and %i.\n", UINT16_MAX);
+                fprintf(stderr, "Error in openTXTUInt16Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (errno == ERANGE)
+            {
+                //If the number is too small or too large, loop
+                printf("This number is too small or too large.\n");
+                fprintf(stderr, "Error in openTXTUInt16Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (endptr == bufferString)
+            {
+                //If no character was read, loop
+                printf("No character was read, enter a valid number.\n");
+                fprintf(stderr, "Error in openTXTUInt16Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (*endptr != '\0' && *endptr != '\n')
+            {
+                //If *endptr is neither end of string nor newline,
+                //the *whole* input was not converted, loop
+                printf("The whole input was not converted, enter a valid number.\n");
+                fprintf(stderr, "Error in openTXTUInt16Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else
+            {
+                arrayOpened->array[arrayCounter] = (uint16_t) rangeTest;
+            }
+        }
+            
+        printf("File successfully read!\n");
+        
+        if (fclose(arrayFile) == EOF)
+        {
+            fprintf(stderr, "Error in openTXTUInt16Array (fclose) : %s\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+void openTXTUInt32Array(const char *filename, uint32Array *arrayOpened)
+{
+    char *bufferString = calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
+    if (bufferString == NULL)
+    {
+        //Allocation verification
+        fprintf(stderr, "Error in openTXTUInt32Array (calloc) : %s.\n", strerror(errno));
+        exit(EXIT_FAILURE);
+    }
+
+    uint32_t rangeTest;
+
+    FILE *arrayFile = NULL;
+
+    errno = 0;
+    
+    //Open a new file for reading, fails if the file does not exist
+    arrayFile = fopen(filename, "r");
+    if (NULL == arrayFile)
+    {
+        /* Handle error */
+        fprintf(stderr, "Error in openTXTUInt32Array (fopen) : %s.\n", strerror(errno));
+    }
+    else
+    {
+        /* Read from file */
+        //Read the size
+        numberOfElements arraySize = 0;
+
+        if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in openTXTUInt32Array (fgets) : %s\nCannot read arraySize from arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
+        //Helps to check the input
+        char *endptr = NULL;
+
+        //Reset error number
+        errno = 0;
+
+        //Convert input
+        arraySize = strtoull(bufferString, &endptr, 10);
+
+        if (errno == ERANGE)
+        {
+            //If the number is too small or too large, loop
+            printf("This number is too small or too large.\n");
+            fprintf(stderr, "Error in openTXTUInt32Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else if (endptr == bufferString)
+        {
+            //If no character was read, loop
+            printf("No character was read, enter a valid number.\n");
+            fprintf(stderr, "Error in openTXTUInt32Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else if (*endptr != '\0' && *endptr != '\n')
+        {
+            //If *endptr is neither end of string nor newline,
+            //the *whole* input was not converted, loop
+            printf("The whole input was not converted, enter a valid number.\n");
+            fprintf(stderr, "Error in openTXTUInt32Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else
+        {
+            //Initialize array
+            initializeUInt32Array(&arraySize, arrayOpened);
+        }
+        
+        //Read the array
+        numberOfElements arrayCounter;
+        for (arrayCounter = 0; arrayCounter < arrayOpened->size ; arrayCounter++)
+        {
+            if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in openTXTUInt32Array (fgets) : %s\nCannot read array element from arrayFile.\n", strerror(errno));
+                exit(EXIT_FAILURE);
+            }
+
+            //Reset endptr
+            endptr = NULL;
+
+            //Reset error number
+            errno = 0;
+
+            //Convert input
+            rangeTest = strtoul(bufferString, &endptr, 10);
+
+            if (errno == ERANGE)
+            {
+                //If the number is too small or too large, loop
+                printf("This number is too small or too large.\n");
+                fprintf(stderr, "Error in openTXTUInt32Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (endptr == bufferString)
+            {
+                //If no character was read, loop
+                printf("No character was read, enter a valid number.\n");
+                fprintf(stderr, "Error in openTXTUInt32Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (*endptr != '\0' && *endptr != '\n')
+            {
+                //If *endptr is neither end of string nor newline,
+                //the *whole* input was not converted, loop
+                printf("The whole input was not converted, enter a valid number.\n");
+                fprintf(stderr, "Error in openTXTUInt32Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else
+            {
+                arrayOpened->array[arrayCounter] = rangeTest;
+            }
+        }
+            
+        printf("File successfully read!\n");
+        
+        if (fclose(arrayFile) == EOF)
+        {
+            fprintf(stderr, "Error in openTXTUInt32Array (fclose) : %s\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+void openTXTUInt64Array(const char *filename, uint64Array *arrayOpened)
+{
+    char *bufferString = calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
+    if (bufferString == NULL)
+    {
+        //Allocation verification
+        fprintf(stderr, "Error in openTXTUInt64Array (calloc) : %s.\n", strerror(errno));
+        exit(EXIT_FAILURE);
+    }
+
+    uint64_t rangeTest;
+
+    FILE *arrayFile = NULL;
+
+    errno = 0;
+    
+    //Open a new file for reading, fails if the file does not exist
+    arrayFile = fopen(filename, "r");
+    if (NULL == arrayFile)
+    {
+        /* Handle error */
+        fprintf(stderr, "Error in openTXTUInt64Array (fopen) : %s.\n", strerror(errno));
+    }
+    else
+    {
+        /* Read from file */
+        //Read the size
+        numberOfElements arraySize = 0;
+
+        if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in openTXTUInt64Array (fgets) : %s\nCannot read arraySize from arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
+        //Helps to check the input
+        char *endptr = NULL;
+
+        //Reset error number
+        errno = 0;
+
+        //Convert input
+        arraySize = strtoull(bufferString, &endptr, 10);
+
+        if (errno == ERANGE)
+        {
+            //If the number is too small or too large, loop
+            printf("This number is too small or too large.\n");
+            fprintf(stderr, "Error in openTXTUInt64Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else if (endptr == bufferString)
+        {
+            //If no character was read, loop
+            printf("No character was read, enter a valid number.\n");
+            fprintf(stderr, "Error in openTXTUInt64Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else if (*endptr != '\0' && *endptr != '\n')
+        {
+            //If *endptr is neither end of string nor newline,
+            //the *whole* input was not converted, loop
+            printf("The whole input was not converted, enter a valid number.\n");
+            fprintf(stderr, "Error in openTXTUInt64Array (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else
+        {
+            //Initialize array
+            initializeUInt64Array(&arraySize, arrayOpened);
+        }
+        
+        //Read the array
+        numberOfElements arrayCounter;
+        for (arrayCounter = 0; arrayCounter < arrayOpened->size ; arrayCounter++)
+        {
+            if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in openTXTUInt64Array (fgets) : %s\nCannot read array element from arrayFile.\n", strerror(errno));
+                exit(EXIT_FAILURE);
+            }
+
+            //Reset endptr
+            endptr = NULL;
+
+            //Reset error number
+            errno = 0;
+
+            //Convert input
+            rangeTest = strtoull(bufferString, &endptr, 10);
+
+            if (errno == ERANGE)
+            {
+                //If the number is too small or too large, loop
+                printf("This number is too small or too large.\n");
+                fprintf(stderr, "Error in openTXTUInt64Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (endptr == bufferString)
+            {
+                //If no character was read, loop
+                printf("No character was read, enter a valid number.\n");
+                fprintf(stderr, "Error in openTXTUInt64Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (*endptr != '\0' && *endptr != '\n')
+            {
+                //If *endptr is neither end of string nor newline,
+                //the *whole* input was not converted, loop
+                printf("The whole input was not converted, enter a valid number.\n");
+                fprintf(stderr, "Error in openTXTUInt64Array (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else
+            {
+                arrayOpened->array[arrayCounter] = rangeTest;
+            }
+        }
+            
+        printf("File successfully read!\n");
+        
+        if (fclose(arrayFile) == EOF)
+        {
+            fprintf(stderr, "Error in openTXTUInt64Array (fclose) : %s\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+//Open Float Array TXT File
+
+void openTXTFloatArray(const char *filename, floatArray *arrayOpened)
+{
+    char *bufferString = calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
+    if (bufferString == NULL)
+    {
+        //Allocation verification
+        fprintf(stderr, "Error in openTXTFloatArray (calloc) : %s.\n", strerror(errno));
+        exit(EXIT_FAILURE);
+    }
+
+    float rangeTest;
+
+    FILE *arrayFile = NULL;
+
+    errno = 0;
+    
+    //Open a new file for reading, fails if the file does not exist
+    arrayFile = fopen(filename, "r");
+    if (NULL == arrayFile)
+    {
+        /* Handle error */
+        fprintf(stderr, "Error in openTXTFloatArray (fopen) : %s.\n", strerror(errno));
+    }
+    else
+    {
+        /* Read from file */
+        //Read the size
+        numberOfElements arraySize = 0;
+
+        if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in openTXTFloatArray (fgets) : %s\nCannot read arraySize from arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
+        //Helps to check the input
+        char *endptr = NULL;
+
+        //Reset error number
+        errno = 0;
+
+        //Convert input
+        arraySize = strtoull(bufferString, &endptr, 10);
+
+        if (errno == ERANGE)
+        {
+            //If the number is too small or too large, loop
+            printf("This number is too small or too large.\n");
+            fprintf(stderr, "Error in openTXTFloatArray (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else if (endptr == bufferString)
+        {
+            //If no character was read, loop
+            printf("No character was read, enter a valid number.\n");
+            fprintf(stderr, "Error in openTXTFloatArray (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else if (*endptr != '\0' && *endptr != '\n')
+        {
+            //If *endptr is neither end of string nor newline,
+            //the *whole* input was not converted, loop
+            printf("The whole input was not converted, enter a valid number.\n");
+            fprintf(stderr, "Error in openTXTFloatArray (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else
+        {
+            //Initialize array
+            initializeFloatArray(&arraySize, arrayOpened);
+        }
+        
+        //Read the array
+        numberOfElements arrayCounter;
+        for (arrayCounter = 0; arrayCounter < arrayOpened->size ; arrayCounter++)
+        {
+            if(fgets(bufferString, __FLT32X_DECIMAL_DIG__, arrayFile) == NULL)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in openTXTFloatArray (fgets) : %s\nCannot read array element from arrayFile.\n", strerror(errno));
+                exit(EXIT_FAILURE);
+            }
+
+            //Reset endptr
+            endptr = NULL;
+
+            //Reset error number
+            errno = 0;
+
+            //Convert input
+            rangeTest = strtof(bufferString, &endptr);
+
+            if (errno == ERANGE)
+            {
+                //If the number is too small or too large, loop
+                printf("This number is too small or too large.\n");
+                fprintf(stderr, "Error in openTXTFloatArray (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (endptr == bufferString)
+            {
+                //If no character was read, loop
+                printf("No character was read, enter a valid number.\n");
+                fprintf(stderr, "Error in openTXTFloatArray (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (*endptr != '\0' && *endptr != '\n')
+            {
+                //If *endptr is neither end of string nor newline,
+                //the *whole* input was not converted, loop
+                printf("The whole input was not converted, enter a valid number.\n");
+                fprintf(stderr, "Error in openTXTFloatArray (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else
+            {
+                arrayOpened->array[arrayCounter] = rangeTest;
+            }
+        }
+            
+        printf("File successfully read!\n");
+        
+        if (fclose(arrayFile) == EOF)
+        {
+            fprintf(stderr, "Error in openTXTFloatArray (fclose) : %s\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+void openTXTDoubleArray(const char *filename, doubleArray *arrayOpened)
+{
+    char *bufferString = calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
+    if (bufferString == NULL)
+    {
+        //Allocation verification
+        fprintf(stderr, "Error in openTXTDoubleArray (calloc) : %s.\n", strerror(errno));
+        exit(EXIT_FAILURE);
+    }
+
+    double rangeTest;
+
+    FILE *arrayFile = NULL;
+
+    errno = 0;
+    
+    //Open a new file for reading, fails if the file does not exist
+    arrayFile = fopen(filename, "r");
+    if (NULL == arrayFile)
+    {
+        /* Handle error */
+        fprintf(stderr, "Error in openTXTDoubleArray (fopen) : %s.\n", strerror(errno));
+    }
+    else
+    {
+        /* Read from file */
+        //Read the size
+        numberOfElements arraySize = 0;
+
+        if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in openTXTDoubleArray (fgets) : %s\nCannot read arraySize from arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
+        //Helps to check the input
+        char *endptr = NULL;
+
+        //Reset error number
+        errno = 0;
+
+        //Convert input
+        arraySize = strtoull(bufferString, &endptr, 10);
+
+        if (errno == ERANGE)
+        {
+            //If the number is too small or too large, loop
+            printf("This number is too small or too large.\n");
+            fprintf(stderr, "Error in openTXTDoubleArray (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else if (endptr == bufferString)
+        {
+            //If no character was read, loop
+            printf("No character was read, enter a valid number.\n");
+            fprintf(stderr, "Error in openTXTDoubleArray (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else if (*endptr != '\0' && *endptr != '\n')
+        {
+            //If *endptr is neither end of string nor newline,
+            //the *whole* input was not converted, loop
+            printf("The whole input was not converted, enter a valid number.\n");
+            fprintf(stderr, "Error in openTXTDoubleArray (strtol) : Format error in arrayFile\n");
+            exit(EXIT_FAILURE);
+        }
+        else
+        {
+            //Initialize array
+            initializeDoubleArray(&arraySize, arrayOpened);
+        }
+        
+        //Read the array
+        numberOfElements arrayCounter;
+        for (arrayCounter = 0; arrayCounter < arrayOpened->size ; arrayCounter++)
+        {
+            if(fgets(bufferString, __FLT32X_DECIMAL_DIG__, arrayFile) == NULL)
+            {
+                /* Handle error */
+                fprintf(stderr, "Error in openTXTDoubleArray (fgets) : %s\nCannot read array element from arrayFile.\n", strerror(errno));
+                exit(EXIT_FAILURE);
+            }
+
+            //Reset endptr
+            endptr = NULL;
+
+            //Reset error number
+            errno = 0;
+
+            //Convert input
+            rangeTest = strtof(bufferString, &endptr);
+
+            if (errno == ERANGE)
+            {
+                //If the number is too small or too large, loop
+                printf("This number is too small or too large.\n");
+                fprintf(stderr, "Error in openTXTDoubleArray (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (endptr == bufferString)
+            {
+                //If no character was read, loop
+                printf("No character was read, enter a valid number.\n");
+                fprintf(stderr, "Error in openTXTDoubleArray (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else if (*endptr != '\0' && *endptr != '\n')
+            {
+                //If *endptr is neither end of string nor newline,
+                //the *whole* input was not converted, loop
+                printf("The whole input was not converted, enter a valid number.\n");
+                fprintf(stderr, "Error in openTXTDoubleArray (strtol) : Format error in arrayFile\n");
+                exit(EXIT_FAILURE);
+            }
+            else
+            {
+                arrayOpened->array[arrayCounter] = rangeTest;
+            }
+        }
+            
+        printf("File successfully read!\n");
+        
+        if (fclose(arrayFile) == EOF)
+        {
+            fprintf(stderr, "Error in openTXTDoubleArray (fclose) : %s\n", strerror(errno));
             exit(EXIT_FAILURE);
         }
     }

@@ -411,28 +411,28 @@ void readDoubleArray(doubleArray *inputArray);
 
 /*! \fn         void writeInt8Array(const int8Array *arrayToWrite)
     \brief      Writes a user int8Array in a int8array (.i8arr) file
-    \details    Asks for the filename and then writes the file
+    \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
     \param[in]  arrayToWrite    The address of the int8Array which will be written
 */
 void writeInt8Array(const int8Array *arrayToWrite);
 
 /*! \fn         void writeInt16Array(const int16Array *arrayToWrite)
     \brief      Writes a user int16Array in a int16array (.i16arr) file
-    \details    Asks for the filename and then writes the file
+    \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
     \param[in]  arrayToWrite    The address of the int16Array which will be written
 */
 void writeInt16Array(const int16Array *arrayToWrite);
 
 /*! \fn         void writeInt32Array(const int32Array *arrayToWrite)
     \brief      Writes a user int32Array in a int32array (.i32arr) file
-    \details    Asks for the filename and then writes the file
+    \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
     \param[in]  arrayToWrite    The address of the int32Array which will be written
 */
 void writeInt32Array(const int32Array *arrayToWrite);
 
 /*! \fn         void writeInt64Array(const int64Array *arrayToWrite)
     \brief      Writes a user int64Array in a int64array (.i64arr) file
-    \details    Asks for the filename and then writes the file
+    \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
     \param[in]  arrayToWrite    The address of the int64Array which will be written
 */
 void writeInt64Array(const int64Array *arrayToWrite);
@@ -441,28 +441,28 @@ void writeInt64Array(const int64Array *arrayToWrite);
 
 /*! \fn         void writeUInt8Array(const uint8Array *arrayToWrite)
     \brief      Writes a user uint8Array in a uint8array (.ui8arr) file
-    \details    Asks for the filename and then writes the file
+    \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
     \param[in]  arrayToWrite    The address of the uint8Array which will be written
 */
 void writeUInt8Array(const uint8Array *arrayToWrite);
 
 /*! \fn         void writeUInt16Array(const uint16Array *arrayToWrite)
     \brief      Writes a user uint16Array in a uint16array (.ui16arr) file
-    \details    Asks for the filename and then writes the file
+    \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
     \param[in]  arrayToWrite    The address of the uint16Array which will be written
 */
 void writeUInt16Array(const uint16Array *arrayToWrite);
 
 /*! \fn         void writeUInt32Array(const uint32Array *arrayToWrite)
     \brief      Writes a user uint32Array in a uint32array (.ui32arr) file
-    \details    Asks for the filename and then writes the file
+    \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
     \param[in]  arrayToWrite    The address of the uint32Array which will be written
 */
 void writeUInt32Array(const uint32Array *arrayToWrite);
 
 /*! \fn         void writeUInt64Array(const uint64Array *arrayToWrite)
     \brief      Writes a user uint64Array in a uint64array (.ui64arr) file
-    \details    Asks for the filename and then writes the file
+    \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
     \param[in]  arrayToWrite    The address of the uint64Array which will be written
 */
 void writeUInt64Array(const uint64Array *arrayToWrite);
@@ -471,14 +471,14 @@ void writeUInt64Array(const uint64Array *arrayToWrite);
 
 /*! \fn         void writeFloatArray(const floatArray *arrayToWrite)
     \brief      Writes a user floatArray in a floatarray (.fltarr) file
-    \details    Asks for the filename and then writes the file
+    \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
     \param[in]  arrayToWrite    The address of the floatArray which will be written
 */
 void writeFloatArray(const floatArray *arrayToWrite);
 
 /*! \fn         void writeDoubleArray(const doubleArray *arrayToWrite)
     \brief      Writes a user doubleArray in a doublearray (.dblarr) file
-    \details    Asks for the filename and then writes the file
+    \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
     \param[in]  arrayToWrite    The address of the doubleArray which will be written
 */
 void writeDoubleArray(const doubleArray *arrayToWrite);
@@ -491,7 +491,7 @@ void writeDoubleArray(const doubleArray *arrayToWrite);
 
 /*! \fn         void openInt8Array(const char *filename, int8Array *arrayOpened)
     \brief      Opens a user int8Array from a int8array (.i8arr) file
-    \details    Asks for the filename and then opens the file and store it in memory
+    \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
     \param[in]   filename       Characters string of the filename with its extension
     \param[out]  arrayOpened    The address of the int8Array which will be stored in memory
 */
@@ -499,7 +499,7 @@ void openInt8Array(const char *filename, int8Array *arrayOpened);
 
 /*! \fn         void openInt16Array(const char *filename, int16Array *arrayOpened)
     \brief      Opens a user int16Array from a int16array (.i16arr) file
-    \details    Asks for the filename and then opens the file
+    \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
     \param[in]   filename       Characters string of the filename with its extension
     \param[out]  arrayOpened    The address of the int16Array which will be stored in memory
 */
@@ -507,7 +507,7 @@ void openInt16Array(const char *filename, int16Array *arrayOpened);
 
 /*! \fn         void openInt32Array(const char *filename, int32Array *arrayOpened)
     \brief      Opens a user int32Array from a int32array (.i32arr) file
-    \details    Asks for the filename and then opens the file
+    \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
     \param[in]   filename       Characters string of the filename with its extension
     \param[out]  arrayOpened    The address of the int32Array which will be stored in memory
 */
@@ -515,7 +515,7 @@ void openInt32Array(const char *filename, int32Array *arrayOpened);
 
 /*! \fn         void openInt64Array(const char *filename, int64Array *arrayOpened)
     \brief      Opens a user int64Array from a int64array (.i64arr) file
-    \details    Asks for the filename and then opens the file
+    \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
     \param[in]   filename       Characters string of the filename with its extension
     \param[out]  arrayOpened    The address of the int64Array which will be stored in memory
 */
@@ -525,7 +525,7 @@ void openInt64Array(const char *filename, int64Array *arrayOpened);
 
 /*! \fn         void openUInt8Array(const char *filename, uint8Array *arrayOpened)
     \brief      Opens a user uint8Array from a uint8array (.ui8arr) file
-    \details    Asks for the filename and then opens the file
+    \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
     \param[in]   filename       Characters string of the filename with its extension
     \param[out]  arrayOpened    The address of the uint8Array which will be stored in memory
 */
@@ -533,7 +533,7 @@ void openUInt8Array(const char *filename, uint8Array *arrayOpened);
 
 /*! \fn         void openUInt16Array(const char *filename, uint16Array *arrayOpened)
     \brief      Opens a user uint16Array from a uint16array (.ui16arr) file
-    \details    Asks for the filename and then opens the file
+    \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
     \param[in]   filename       Characters string of the filename with its extension
     \param[out]  arrayOpened    The address of the uint16Array which will be stored in memory
 */
@@ -541,7 +541,7 @@ void openUInt16Array(const char *filename, uint16Array *arrayOpened);
 
 /*! \fn         void openUInt32Array(const char *filename, uint32Array *arrayOpened)
     \brief      Opens a user uint32Array from a uint32array (.ui32arr) file
-    \details    Asks for the filename and then opens the file
+    \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
     \param[in]   filename       Characters string of the filename with its extension
     \param[out]  arrayOpened    The address of the uint32Array which will be stored in memory
 */
@@ -549,7 +549,7 @@ void openUInt32Array(const char *filename, uint32Array *arrayOpened);
 
 /*! \fn         void openUInt64Array(const char *filename, uint64Array *arrayOpened)
     \brief      Opens a user uint64Array from a uint64array (.ui64arr) file
-    \details    Asks for the filename and then opens the file
+    \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
     \param[in]   filename       Characters string of the filename with its extension
     \param[out]  arrayOpened    The address of the uint64Array which will be stored in memory
 */
@@ -559,7 +559,7 @@ void openUInt64Array(const char *filename, uint64Array *arrayOpened);
 
 /*! \fn         void openFloatArray(const char *filename, floatArray *arrayOpened)
     \brief      Opens a user floatArray from a floatarray (.fltarr) file
-    \details    Asks for the filename and then opens the file
+    \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
     \param[in]   filename       Characters string of the filename with its extension
     \param[out]  arrayOpened    The address of the floatArray which will be stored in memory
 */
@@ -567,13 +567,180 @@ void openFloatArray(const char *filename, floatArray *arrayOpened);
 
 /*! \fn         void openDoubleArray(const char *filename, doubleArray *arrayOpened)
     \brief      Opens a user doubleArray from a doublearray (.dblarr) file
-    \details    Asks for the filename and then opens the file
+    \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
     \param[in]   filename       Characters string of the filename with its extension
     \param[out]  arrayOpened    The address of the doubleArray which will be stored in memory
 */
 void openDoubleArray(const char *filename, doubleArray *arrayOpened);
 
 
+
+//Write Array as TXT File
+
+//Write Int Array TXT File
+
+/*! \fn         void writeTXTInt8Array(const int8Array *arrayToWrite)
+    \brief      Writes a user int8Array in a text (.txt) file
+    \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
+    \param[in]  arrayToWrite    The address of the int8Array which will be written
+*/
+void writeTXTInt8Array(const int8Array *arrayToWrite);
+
+/*! \fn         void writeTXTInt16Array(const int16Array *arrayToWrite)
+    \brief      Writes a user int16Array in a text (.txt) file
+    \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
+    \param[in]  arrayToWrite    The address of the int16Array which will be written
+*/
+void writeTXTInt16Array(const int16Array *arrayToWrite);
+
+/*! \fn         void writeTXTInt32Array(const int32Array *arrayToWrite)
+    \brief      Writes a user int32Array in a text (.txt) file
+    \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
+    \param[in]  arrayToWrite    The address of the int32Array which will be written
+*/
+void writeTXTInt32Array(const int32Array *arrayToWrite);
+
+/*! \fn         void writeTXTInt64Array(const int64Array *arrayToWrite)
+    \brief      Writes a user int64Array in a text (.txt) file
+    \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
+    \param[in]  arrayToWrite    The address of the int64Array which will be written
+*/
+void writeTXTInt64Array(const int64Array *arrayToWrite);
+
+//Write Unsigned Int Array TXT File
+
+/*! \fn         void writeTXTUInt8Array(const uint8Array *arrayToWrite)
+    \brief      Writes a user uint8Array in a text (.txt) file
+    \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
+    \param[in]  arrayToWrite    The address of the uint8Array which will be written
+*/
+void writeTXTUInt8Array(const uint8Array *arrayToWrite);
+
+/*! \fn         void writeTXTUInt16Array(const uint16Array *arrayToWrite)
+    \brief      Writes a user uint16Array in a text (.txt) file
+    \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
+    \param[in]  arrayToWrite    The address of the uint16Array which will be written
+*/
+void writeTXTUInt16Array(const uint16Array *arrayToWrite);
+
+/*! \fn         void writeTXTUInt32Array(const uint32Array *arrayToWrite)
+    \brief      Writes a user uint32Array in a text (.txt) file
+    \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
+    \param[in]  arrayToWrite    The address of the uint32Array which will be written
+*/
+void writeTXTUInt32Array(const uint32Array *arrayToWrite);
+
+/*! \fn         void writeTXTUInt64Array(const uint64Array *arrayToWrite)
+    \brief      Writes a user uint64Array in a text (.txt) file
+    \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
+    \param[in]  arrayToWrite    The address of the uint64Array which will be written
+*/
+void writeTXTUInt64Array(const uint64Array *arrayToWrite);
+
+//Write Float Array TXT File
+
+/*! \fn         void writeTXTFloatArray(const floatArray *arrayToWrite)
+    \brief      Writes a user floatArray in a text (.txt) file
+    \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
+    \param[in]  arrayToWrite    The address of the floatArray which will be written
+*/
+void writeTXTFloatArray(const floatArray *arrayToWrite);
+
+/*! \fn         void writeTXTDoubleArray(const doubleArray *arrayToWrite)
+    \brief      Writes a user doubleArray in a text (.txt) file
+    \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
+    \param[in]  arrayToWrite    The address of the doubleArray which will be written
+*/
+void writeTXTDoubleArray(const doubleArray *arrayToWrite);
+
+
+//Open Array as TXT File
+
+//Open Int Array TXT File
+
+/*! \fn         void openTXTInt8Array(const char *filename, int8Array *arrayOpened)
+    \brief      Opens a user int8Array from a text (.txt) file
+    \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
+    \param[in]   filename       Characters string of the filename with its extension
+    \param[out]  arrayOpened    The address of the int8Array which will be stored in memory
+*/
+void openTXTInt8Array(const char *filename, int8Array *arrayOpened);
+
+/*! \fn         void openTXTInt16Array(const char *filename, int16Array *arrayOpened)
+    \brief      Opens a user int16Array from a text (.txt) file
+    \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
+    \param[in]   filename       Characters string of the filename with its extension
+    \param[out]  arrayOpened    The address of the int16Array which will be stored in memory
+*/
+void openTXTInt16Array(const char *filename, int16Array *arrayOpened);
+
+/*! \fn         void openTXTInt32Array(const char *filename, int32Array *arrayOpened)
+    \brief      Opens a user int32Array from a text (.txt) file
+    \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
+    \param[in]   filename       Characters string of the filename with its extension
+    \param[out]  arrayOpened    The address of the int32Array which will be stored in memory
+*/
+void openTXTInt32Array(const char *filename, int32Array *arrayOpened);
+
+/*! \fn         void openTXTInt64Array(const char *filename, int64Array *arrayOpened)
+    \brief      Opens a user int64Array from a text (.txt) file
+    \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
+    \param[in]   filename       Characters string of the filename with its extension
+    \param[out]  arrayOpened    The address of the int64Array which will be stored in memory
+*/
+void openTXTInt64Array(const char *filename, int64Array *arrayOpened);
+
+//Open Unsigned Int Array TXT File
+
+/*! \fn         void openTXTUInt8Array(const char *filename, uint8Array *arrayOpened)
+    \brief      Opens a user uint8Array from a text (.txt) file
+    \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
+    \param[in]   filename       Characters string of the filename with its extension
+    \param[out]  arrayOpened    The address of the uint8Array which will be stored in memory
+*/
+void openTXTUInt8Array(const char *filename, uint8Array *arrayOpened);
+
+/*! \fn         void openTXTUInt16Array(const char *filename, uint16Array *arrayOpened)
+    \brief      Opens a user uint16Array from a text (.txt) file
+    \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
+    \param[in]   filename       Characters string of the filename with its extension
+    \param[out]  arrayOpened    The address of the uint16Array which will be stored in memory
+*/
+void openTXTUInt16Array(const char *filename, uint16Array *arrayOpened);
+
+/*! \fn         void openTXTUInt32Array(const char *filename, uint32Array *arrayOpened)
+    \brief      Opens a user uint32Array from a text (.txt) file
+    \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
+    \param[in]   filename       Characters string of the filename with its extension
+    \param[out]  arrayOpened    The address of the uint32Array which will be stored in memory
+*/
+void openTXTUInt32Array(const char *filename, uint32Array *arrayOpened);
+
+/*! \fn         void openTXTUInt64Array(const char *filename, uint64Array *arrayOpened)
+    \brief      Opens a user uint64Array from a text (.txt) file
+    \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
+    \param[in]   filename       Characters string of the filename with its extension
+    \param[out]  arrayOpened    The address of the uint64Array which will be stored in memory
+*/
+void openTXTUInt64Array(const char *filename, uint64Array *arrayOpened);
+
+//Open Float Array TXT File
+
+/*! \fn         void openFloatArray(const char *filename, floatArray *arrayOpened)
+    \brief      Opens a user floatArray from a text (.txt) file
+    \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
+    \param[in]   filename       Characters string of the filename with its extension
+    \param[out]  arrayOpened    The address of the floatArray which will be stored in memory
+*/
+void openFloatArray(const char *filename, floatArray *arrayOpened);
+
+/*! \fn         void openDoubleArray(const char *filename, doubleArray *arrayOpened)
+    \brief      Opens a user doubleArray from a text (.txt) file
+    \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
+    \param[in]   filename       Characters string of the filename with its extension
+    \param[out]  arrayOpened    The address of the doubleArray which will be stored in memory
+*/
+void openDoubleArray(const char *filename, doubleArray *arrayOpened);
 
 //Maximum in array
 

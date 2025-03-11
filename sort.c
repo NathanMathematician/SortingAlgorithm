@@ -4206,6 +4206,939 @@ void sortCountingUInt16Array(uint16Array *inputArray, uint16Array *arraySorted)
 
 
 
+//Miscellaneous
+
+void sortVerificationInt8Array(int8Array *toVerify, int8_t *verifBool)
+{
+    numberOfElements position = 0;
+
+    if (toVerify->size <= 1)
+    {
+        printf("Array with one element or less.\n");
+    }
+    else
+    {
+        if (toVerify->array[position] < toVerify->array[position + 1])
+        {
+            while (toVerify->array[position] <= toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (position == toVerify->size - 1)
+            {
+                printf("Array sorted in ascending order.\n");
+                *verifBool = BOOL_TRUE;
+            }
+            else
+            {
+                printf("Array not sorted.\n");
+                *verifBool = BOOL_FALSE;
+            }
+        }
+        else if (toVerify->array[position] > toVerify->array[position + 1])
+        {
+            while (toVerify->array[position] >= toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (position == toVerify->size - 1)
+            {
+                printf("Array sorted in descending order.\n");
+                *verifBool = BOOL_TRUE;
+            }
+            else
+            {
+                printf("Array not sorted.\n");
+                *verifBool = BOOL_FALSE;
+            }
+        }
+        else
+        {
+            while (toVerify->array[position] == toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (toVerify->array[position] <= toVerify->array[position + 1])
+            {
+                while (toVerify->array[position] <= toVerify->array[position + 1] && position < toVerify->size - 1)
+                {
+                    position++;
+                }
+
+                if (position == toVerify->size - 1)
+                {
+                    printf("Array sorted in ascending order.\n");
+                    *verifBool = BOOL_TRUE;
+                }
+                else
+                {
+                    printf("Array not sorted.\n");
+                    *verifBool = BOOL_FALSE;
+                }
+            }
+            else if (toVerify->array[position] > toVerify->array[position + 1])
+            {
+                while (toVerify->array[position] >= toVerify->array[position + 1] && position < toVerify->size - 1)
+                {
+                    position++;
+                }
+
+                if (position == toVerify->size - 1)
+                {
+                    printf("Array sorted in descending order.\n");
+                    *verifBool = BOOL_TRUE;
+                }
+                else
+                {
+                    printf("Array not sorted.\n");
+                    *verifBool = BOOL_FALSE;
+                }
+            }
+        }
+    }
+}
+
+void sortVerificationInt16Array(int16Array *toVerify, int8_t *verifBool)
+{
+    numberOfElements position = 0;
+
+    if (toVerify->size <= 1)
+    {
+        printf("Array with one element or less.\n");
+    }
+    else
+    {
+        if (toVerify->array[position] < toVerify->array[position + 1])
+        {
+            while (toVerify->array[position] <= toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (position == toVerify->size - 1)
+            {
+                printf("Array sorted in ascending order.\n");
+                *verifBool = BOOL_TRUE;
+            }
+            else
+            {
+                printf("Array not sorted.\n");
+                *verifBool = BOOL_FALSE;
+            }
+        }
+        else if (toVerify->array[position] > toVerify->array[position + 1])
+        {
+            while (toVerify->array[position] >= toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (position == toVerify->size - 1)
+            {
+                printf("Array sorted in descending order.\n");
+                *verifBool = BOOL_TRUE;
+            }
+            else
+            {
+                printf("Array not sorted.\n");
+                *verifBool = BOOL_FALSE;
+            }
+        }
+        else
+        {
+            while (toVerify->array[position] == toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (toVerify->array[position] <= toVerify->array[position + 1])
+            {
+                while (toVerify->array[position] <= toVerify->array[position + 1] && position < toVerify->size - 1)
+                {
+                    position++;
+                }
+
+                if (position == toVerify->size - 1)
+                {
+                    printf("Array sorted in ascending order.\n");
+                    *verifBool = BOOL_TRUE;
+                }
+                else
+                {
+                    printf("Array not sorted.\n");
+                    *verifBool = BOOL_FALSE;
+                }
+            }
+            else if (toVerify->array[position] > toVerify->array[position + 1])
+            {
+                while (toVerify->array[position] >= toVerify->array[position + 1] && position < toVerify->size - 1)
+                {
+                    position++;
+                }
+
+                if (position == toVerify->size - 1)
+                {
+                    printf("Array sorted in descending order.\n");
+                    *verifBool = BOOL_TRUE;
+                }
+                else
+                {
+                    printf("Array not sorted.\n");
+                    *verifBool = BOOL_FALSE;
+                }
+            }
+        }
+    }
+}
+
+void sortVerificationInt32Array(int32Array *toVerify, int8_t *verifBool)
+{
+    numberOfElements position = 0;
+
+    if (toVerify->size <= 1)
+    {
+        printf("Array with one element or less.\n");
+    }
+    else
+    {
+        if (toVerify->array[position] < toVerify->array[position + 1])
+        {
+            while (toVerify->array[position] <= toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (position == toVerify->size - 1)
+            {
+                printf("Array sorted in ascending order.\n");
+                *verifBool = BOOL_TRUE;
+            }
+            else
+            {
+                printf("Array not sorted.\n");
+                *verifBool = BOOL_FALSE;
+            }
+        }
+        else if (toVerify->array[position] > toVerify->array[position + 1])
+        {
+            while (toVerify->array[position] >= toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (position == toVerify->size - 1)
+            {
+                printf("Array sorted in descending order.\n");
+                *verifBool = BOOL_TRUE;
+            }
+            else
+            {
+                printf("Array not sorted.\n");
+                *verifBool = BOOL_FALSE;
+            }
+        }
+        else
+        {
+            while (toVerify->array[position] == toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (toVerify->array[position] <= toVerify->array[position + 1])
+            {
+                while (toVerify->array[position] <= toVerify->array[position + 1] && position < toVerify->size - 1)
+                {
+                    position++;
+                }
+
+                if (position == toVerify->size - 1)
+                {
+                    printf("Array sorted in ascending order.\n");
+                    *verifBool = BOOL_TRUE;
+                }
+                else
+                {
+                    printf("Array not sorted.\n");
+                    *verifBool = BOOL_FALSE;
+                }
+            }
+            else if (toVerify->array[position] > toVerify->array[position + 1])
+            {
+                while (toVerify->array[position] >= toVerify->array[position + 1] && position < toVerify->size - 1)
+                {
+                    position++;
+                }
+
+                if (position == toVerify->size - 1)
+                {
+                    printf("Array sorted in descending order.\n");
+                    *verifBool = BOOL_TRUE;
+                }
+                else
+                {
+                    printf("Array not sorted.\n");
+                    *verifBool = BOOL_FALSE;
+                }
+            }
+        }
+    }
+}
+
+void sortVerificationInt64Array(int64Array *toVerify, int8_t *verifBool)
+{
+    numberOfElements position = 0;
+
+    if (toVerify->size <= 1)
+    {
+        printf("Array with one element or less.\n");
+    }
+    else
+    {
+        if (toVerify->array[position] < toVerify->array[position + 1])
+        {
+            while (toVerify->array[position] <= toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (position == toVerify->size - 1)
+            {
+                printf("Array sorted in ascending order.\n");
+                *verifBool = BOOL_TRUE;
+            }
+            else
+            {
+                printf("Array not sorted.\n");
+                *verifBool = BOOL_FALSE;
+            }
+        }
+        else if (toVerify->array[position] > toVerify->array[position + 1])
+        {
+            while (toVerify->array[position] >= toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (position == toVerify->size - 1)
+            {
+                printf("Array sorted in descending order.\n");
+                *verifBool = BOOL_TRUE;
+            }
+            else
+            {
+                printf("Array not sorted.\n");
+                *verifBool = BOOL_FALSE;
+            }
+        }
+        else
+        {
+            while (toVerify->array[position] == toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (toVerify->array[position] <= toVerify->array[position + 1])
+            {
+                while (toVerify->array[position] <= toVerify->array[position + 1] && position < toVerify->size - 1)
+                {
+                    position++;
+                }
+
+                if (position == toVerify->size - 1)
+                {
+                    printf("Array sorted in ascending order.\n");
+                    *verifBool = BOOL_TRUE;
+                }
+                else
+                {
+                    printf("Array not sorted.\n");
+                    *verifBool = BOOL_FALSE;
+                }
+            }
+            else if (toVerify->array[position] > toVerify->array[position + 1])
+            {
+                while (toVerify->array[position] >= toVerify->array[position + 1] && position < toVerify->size - 1)
+                {
+                    position++;
+                }
+
+                if (position == toVerify->size - 1)
+                {
+                    printf("Array sorted in descending order.\n");
+                    *verifBool = BOOL_TRUE;
+                }
+                else
+                {
+                    printf("Array not sorted.\n");
+                    *verifBool = BOOL_FALSE;
+                }
+            }
+        }
+    }
+}
+
+void sortVerificationUInt8Array(uint8Array *toVerify, int8_t *verifBool)
+{
+    numberOfElements position = 0;
+
+    if (toVerify->size <= 1)
+    {
+        printf("Array with one element or less.\n");
+    }
+    else
+    {
+        if (toVerify->array[position] < toVerify->array[position + 1])
+        {
+            while (toVerify->array[position] <= toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (position == toVerify->size - 1)
+            {
+                printf("Array sorted in ascending order.\n");
+                *verifBool = BOOL_TRUE;
+            }
+            else
+            {
+                printf("Array not sorted.\n");
+                *verifBool = BOOL_FALSE;
+            }
+        }
+        else if (toVerify->array[position] > toVerify->array[position + 1])
+        {
+            while (toVerify->array[position] >= toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (position == toVerify->size - 1)
+            {
+                printf("Array sorted in descending order.\n");
+                *verifBool = BOOL_TRUE;
+            }
+            else
+            {
+                printf("Array not sorted.\n");
+                *verifBool = BOOL_FALSE;
+            }
+        }
+        else
+        {
+            while (toVerify->array[position] == toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (toVerify->array[position] <= toVerify->array[position + 1])
+            {
+                while (toVerify->array[position] <= toVerify->array[position + 1] && position < toVerify->size - 1)
+                {
+                    position++;
+                }
+
+                if (position == toVerify->size - 1)
+                {
+                    printf("Array sorted in ascending order.\n");
+                    *verifBool = BOOL_TRUE;
+                }
+                else
+                {
+                    printf("Array not sorted.\n");
+                    *verifBool = BOOL_FALSE;
+                }
+            }
+            else if (toVerify->array[position] > toVerify->array[position + 1])
+            {
+                while (toVerify->array[position] >= toVerify->array[position + 1] && position < toVerify->size - 1)
+                {
+                    position++;
+                }
+
+                if (position == toVerify->size - 1)
+                {
+                    printf("Array sorted in descending order.\n");
+                    *verifBool = BOOL_TRUE;
+                }
+                else
+                {
+                    printf("Array not sorted.\n");
+                    *verifBool = BOOL_FALSE;
+                }
+            }
+        }
+    }
+}
+
+void sortVerificationUInt16Array(uint16Array *toVerify, int8_t *verifBool)
+{
+    numberOfElements position = 0;
+
+    if (toVerify->size <= 1)
+    {
+        printf("Array with one element or less.\n");
+    }
+    else
+    {
+        if (toVerify->array[position] < toVerify->array[position + 1])
+        {
+            while (toVerify->array[position] <= toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (position == toVerify->size - 1)
+            {
+                printf("Array sorted in ascending order.\n");
+                *verifBool = BOOL_TRUE;
+            }
+            else
+            {
+                printf("Array not sorted.\n");
+                *verifBool = BOOL_FALSE;
+            }
+        }
+        else if (toVerify->array[position] > toVerify->array[position + 1])
+        {
+            while (toVerify->array[position] >= toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (position == toVerify->size - 1)
+            {
+                printf("Array sorted in descending order.\n");
+                *verifBool = BOOL_TRUE;
+            }
+            else
+            {
+                printf("Array not sorted.\n");
+                *verifBool = BOOL_FALSE;
+            }
+        }
+        else
+        {
+            while (toVerify->array[position] == toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (toVerify->array[position] <= toVerify->array[position + 1])
+            {
+                while (toVerify->array[position] <= toVerify->array[position + 1] && position < toVerify->size - 1)
+                {
+                    position++;
+                }
+
+                if (position == toVerify->size - 1)
+                {
+                    printf("Array sorted in ascending order.\n");
+                    *verifBool = BOOL_TRUE;
+                }
+                else
+                {
+                    printf("Array not sorted.\n");
+                    *verifBool = BOOL_FALSE;
+                }
+            }
+            else if (toVerify->array[position] > toVerify->array[position + 1])
+            {
+                while (toVerify->array[position] >= toVerify->array[position + 1] && position < toVerify->size - 1)
+                {
+                    position++;
+                }
+
+                if (position == toVerify->size - 1)
+                {
+                    printf("Array sorted in descending order.\n");
+                    *verifBool = BOOL_TRUE;
+                }
+                else
+                {
+                    printf("Array not sorted.\n");
+                    *verifBool = BOOL_FALSE;
+                }
+            }
+        }
+    }
+}
+
+void sortVerificationUInt32Array(uint32Array *toVerify, int8_t *verifBool)
+{
+    numberOfElements position = 0;
+
+    if (toVerify->size <= 1)
+    {
+        printf("Array with one element or less.\n");
+    }
+    else
+    {
+        if (toVerify->array[position] < toVerify->array[position + 1])
+        {
+            while (toVerify->array[position] <= toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (position == toVerify->size - 1)
+            {
+                printf("Array sorted in ascending order.\n");
+                *verifBool = BOOL_TRUE;
+            }
+            else
+            {
+                printf("Array not sorted.\n");
+                *verifBool = BOOL_FALSE;
+            }
+        }
+        else if (toVerify->array[position] > toVerify->array[position + 1])
+        {
+            while (toVerify->array[position] >= toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (position == toVerify->size - 1)
+            {
+                printf("Array sorted in descending order.\n");
+                *verifBool = BOOL_TRUE;
+            }
+            else
+            {
+                printf("Array not sorted.\n");
+                *verifBool = BOOL_FALSE;
+            }
+        }
+        else
+        {
+            while (toVerify->array[position] == toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (toVerify->array[position] <= toVerify->array[position + 1])
+            {
+                while (toVerify->array[position] <= toVerify->array[position + 1] && position < toVerify->size - 1)
+                {
+                    position++;
+                }
+
+                if (position == toVerify->size - 1)
+                {
+                    printf("Array sorted in ascending order.\n");
+                    *verifBool = BOOL_TRUE;
+                }
+                else
+                {
+                    printf("Array not sorted.\n");
+                    *verifBool = BOOL_FALSE;
+                }
+            }
+            else if (toVerify->array[position] > toVerify->array[position + 1])
+            {
+                while (toVerify->array[position] >= toVerify->array[position + 1] && position < toVerify->size - 1)
+                {
+                    position++;
+                }
+
+                if (position == toVerify->size - 1)
+                {
+                    printf("Array sorted in descending order.\n");
+                    *verifBool = BOOL_TRUE;
+                }
+                else
+                {
+                    printf("Array not sorted.\n");
+                    *verifBool = BOOL_FALSE;
+                }
+            }
+        }
+    }
+}
+
+void sortVerificationUInt64Array(uint64Array *toVerify, int8_t *verifBool)
+{
+    numberOfElements position = 0;
+
+    if (toVerify->size <= 1)
+    {
+        printf("Array with one element or less.\n");
+    }
+    else
+    {
+        if (toVerify->array[position] < toVerify->array[position + 1])
+        {
+            while (toVerify->array[position] <= toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (position == toVerify->size - 1)
+            {
+                printf("Array sorted in ascending order.\n");
+                *verifBool = BOOL_TRUE;
+            }
+            else
+            {
+                printf("Array not sorted.\n");
+                *verifBool = BOOL_FALSE;
+            }
+        }
+        else if (toVerify->array[position] > toVerify->array[position + 1])
+        {
+            while (toVerify->array[position] >= toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (position == toVerify->size - 1)
+            {
+                printf("Array sorted in descending order.\n");
+                *verifBool = BOOL_TRUE;
+            }
+            else
+            {
+                printf("Array not sorted.\n");
+                *verifBool = BOOL_FALSE;
+            }
+        }
+        else
+        {
+            while (toVerify->array[position] == toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (toVerify->array[position] <= toVerify->array[position + 1])
+            {
+                while (toVerify->array[position] <= toVerify->array[position + 1] && position < toVerify->size - 1)
+                {
+                    position++;
+                }
+
+                if (position == toVerify->size - 1)
+                {
+                    printf("Array sorted in ascending order.\n");
+                    *verifBool = BOOL_TRUE;
+                }
+                else
+                {
+                    printf("Array not sorted.\n");
+                    *verifBool = BOOL_FALSE;
+                }
+            }
+            else if (toVerify->array[position] > toVerify->array[position + 1])
+            {
+                while (toVerify->array[position] >= toVerify->array[position + 1] && position < toVerify->size - 1)
+                {
+                    position++;
+                }
+
+                if (position == toVerify->size - 1)
+                {
+                    printf("Array sorted in descending order.\n");
+                    *verifBool = BOOL_TRUE;
+                }
+                else
+                {
+                    printf("Array not sorted.\n");
+                    *verifBool = BOOL_FALSE;
+                }
+            }
+        }
+    }
+}
+
+void sortVerificationFloatArray(floatArray *toVerify, int8_t *verifBool)
+{
+    numberOfElements position = 0;
+
+    if (toVerify->size <= 1)
+    {
+        printf("Array with one element or less.\n");
+    }
+    else
+    {
+        if (toVerify->array[position] < toVerify->array[position + 1])
+        {
+            while (toVerify->array[position] <= toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (position == toVerify->size - 1)
+            {
+                printf("Array sorted in ascending order.\n");
+                *verifBool = BOOL_TRUE;
+            }
+            else
+            {
+                printf("Array not sorted.\n");
+                *verifBool = BOOL_FALSE;
+            }
+        }
+        else if (toVerify->array[position] > toVerify->array[position + 1])
+        {
+            while (toVerify->array[position] >= toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (position == toVerify->size - 1)
+            {
+                printf("Array sorted in descending order.\n");
+                *verifBool = BOOL_TRUE;
+            }
+            else
+            {
+                printf("Array not sorted.\n");
+                *verifBool = BOOL_FALSE;
+            }
+        }
+        else
+        {
+            while (toVerify->array[position] == toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (toVerify->array[position] <= toVerify->array[position + 1])
+            {
+                while (toVerify->array[position] <= toVerify->array[position + 1] && position < toVerify->size - 1)
+                {
+                    position++;
+                }
+
+                if (position == toVerify->size - 1)
+                {
+                    printf("Array sorted in ascending order.\n");
+                    *verifBool = BOOL_TRUE;
+                }
+                else
+                {
+                    printf("Array not sorted.\n");
+                    *verifBool = BOOL_FALSE;
+                }
+            }
+            else if (toVerify->array[position] > toVerify->array[position + 1])
+            {
+                while (toVerify->array[position] >= toVerify->array[position + 1] && position < toVerify->size - 1)
+                {
+                    position++;
+                }
+
+                if (position == toVerify->size - 1)
+                {
+                    printf("Array sorted in descending order.\n");
+                    *verifBool = BOOL_TRUE;
+                }
+                else
+                {
+                    printf("Array not sorted.\n");
+                    *verifBool = BOOL_FALSE;
+                }
+            }
+        }
+    }
+}
+
+void sortVerificationDoubleArray(doubleArray *toVerify, int8_t *verifBool)
+{
+    numberOfElements position = 0;
+
+    if (toVerify->size <= 1)
+    {
+        printf("Array with one element or less.\n");
+    }
+    else
+    {
+        if (toVerify->array[position] < toVerify->array[position + 1])
+        {
+            while (toVerify->array[position] <= toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (position == toVerify->size - 1)
+            {
+                printf("Array sorted in ascending order.\n");
+                *verifBool = BOOL_TRUE;
+            }
+            else
+            {
+                printf("Array not sorted.\n");
+                *verifBool = BOOL_FALSE;
+            }
+        }
+        else if (toVerify->array[position] > toVerify->array[position + 1])
+        {
+            while (toVerify->array[position] >= toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (position == toVerify->size - 1)
+            {
+                printf("Array sorted in descending order.\n");
+                *verifBool = BOOL_TRUE;
+            }
+            else
+            {
+                printf("Array not sorted.\n");
+                *verifBool = BOOL_FALSE;
+            }
+        }
+        else
+        {
+            while (toVerify->array[position] == toVerify->array[position + 1] && position < toVerify->size - 1)
+            {
+                position++;
+            }
+
+            if (toVerify->array[position] <= toVerify->array[position + 1])
+            {
+                while (toVerify->array[position] <= toVerify->array[position + 1] && position < toVerify->size - 1)
+                {
+                    position++;
+                }
+
+                if (position == toVerify->size - 1)
+                {
+                    printf("Array sorted in ascending order.\n");
+                    *verifBool = BOOL_TRUE;
+                }
+                else
+                {
+                    printf("Array not sorted.\n");
+                    *verifBool = BOOL_FALSE;
+                }
+            }
+            else if (toVerify->array[position] > toVerify->array[position + 1])
+            {
+                while (toVerify->array[position] >= toVerify->array[position + 1] && position < toVerify->size - 1)
+                {
+                    position++;
+                }
+
+                if (position == toVerify->size - 1)
+                {
+                    printf("Array sorted in descending order.\n");
+                    *verifBool = BOOL_TRUE;
+                }
+                else
+                {
+                    printf("Array not sorted.\n");
+                    *verifBool = BOOL_FALSE;
+                }
+            }
+        }
+    }
+}
+
+
 
 
 

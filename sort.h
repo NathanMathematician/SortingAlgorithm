@@ -42,6 +42,17 @@
 */
 #define UINT32_NUMBER_OF_VALUES          4294967296ULL
 
+/*! \def BOOL_TRUE
+    \brief Value for true boolean
+*/
+#define BOOL_TRUE                        1
+
+/*! \def BOOL_FALSE
+    \brief Value for false boolean
+*/
+#define BOOL_FALSE                       0
+
+
 /* Global variables ==================================================== */
 
 
@@ -716,6 +727,90 @@ void sortCountingUInt8Array(uint8Array *inputArray, uint8Array *arraySorted);
     \param  arraySorted[out]    Result array after sort
 */
 void sortCountingUInt16Array(uint16Array *inputArray, uint16Array *arraySorted);
+
+
+
+//Miscellaneous
+
+/*! \fn         void sortVerificationInt8Array(int8Array *toVerify, int8_t *verificationBool)  
+    \brief      Verifies if an array of 8 bits integers
+    \param  toVerify[in]    Array to be verified
+    \param  verifBool[out]  Resulting boolean (1 = TRUE)
+*/
+void sortVerificationInt8Array(int8Array *toVerify, int8_t *verifBool);
+
+/*! \fn         void sortVerificationInt16Array(int16Array *toVerify, int8_t *verificationBool)  
+    \brief      Verifies if an array of 16 bits integers
+    \param  toVerify[in]    Array to be verified
+    \param  verifBool[out]  Resulting boolean (1 = TRUE)
+*/
+void sortVerificationInt16Array(int16Array *toVerify, int8_t *verifBool);
+
+/*! \fn         void sortVerificationInt32Array(int32Array *toVerify, int8_t *verificationBool)  
+    \brief      Verifies if an array of 32 bits integers
+    \param  toVerify[in]    Array to be verified
+    \param  verifBool[out]  Resulting boolean (1 = TRUE)
+*/
+void sortVerificationInt32Array(int32Array *toVerify, int8_t *verifBool);
+
+/*! \fn         void sortVerificationInt64Array(int64Array *toVerify, int8_t *verificationBool)  
+    \brief      Verifies if an array of 64 bits integers
+    \param  toVerify[in]    Array to be verified
+    \param  verifBool[out]  Resulting boolean (1 = TRUE)
+*/
+void sortVerificationInt64Array(int64Array *toVerify, int8_t *verifBool);
+
+/*! \fn         void sortVerificationUInt8Array(uint8Array *toVerify, int8_t *verificationBool)  
+    \brief      Verifies if an array of 8 bits unsigned integers
+    \param  toVerify[in]    Array to be verified
+    \param  verifBool[out]  Resulting boolean (1 = TRUE)
+*/
+void sortVerificationUInt8Array(uint8Array *toVerify, int8_t *verifBool);
+
+/*! \fn         void sortVerificationUInt16Array(uint16Array *toVerify, int8_t *verificationBool)  
+    \brief      Verifies if an array of 16 bits unsigned integers
+    \param  toVerify[in]    Array to be verified
+    \param  verifBool[out]  Resulting boolean (1 = TRUE)
+*/
+void sortVerificationUInt16Array(uint16Array *toVerify, int8_t *verifBool);
+
+/*! \fn         void sortVerificationUInt32Array(uint32Array *toVerify, int8_t *verificationBool)  
+    \brief      Verifies if an array of 32 bits unsigned integers
+    \param  toVerify[in]    Array to be verified
+    \param  verifBool[out]  Resulting boolean (1 = TRUE)
+*/
+void sortVerificationUInt32Array(uint32Array *toVerify, int8_t *verifBool);
+
+/*! \fn         void sortVerificationUInt64Array(uint64Array *toVerify, int8_t *verificationBool)  
+    \brief      Verifies if an array of 64 bits unsigned integers
+    \param  toVerify[in]    Array to be verified
+    \param  verifBool[out]  Resulting boolean (1 = TRUE)
+*/
+void sortVerificationUInt64Array(uint64Array *toVerify, int8_t *verifBool);
+
+/*! \fn         void sortVerificationFloatArray(floatArray *toVerify, int8_t *verificationBool)  
+    \brief      Verifies if an array of floats
+    \param  toVerify[in]    Array to be verified
+    \param  verifBool[out]  Resulting boolean (1 = TRUE)
+*/
+void sortVerificationFloatArray(floatArray *toVerify, int8_t *verifBool);
+
+/*! \fn         void sortVerificationDoubleArray(doubleArray *toVerify, int8_t *verificationBool)  
+    \brief      Verifies if an array of doubles
+    \param  toVerify[in]    Array to be verified
+    \param  verifBool[out]  Resulting boolean (1 = TRUE)
+*/
+void sortVerificationDoubleArray(doubleArray *toVerify, int8_t *verifBool);
+
+
+
+
+
+
+
+
+
+
 
 
 #endif //SORT_H
