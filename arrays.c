@@ -2399,7 +2399,7 @@ void writeTXTDoubleArray(const doubleArray *arrayToWrite)
 
 void openTXTInt8Array(const char *filename, int8Array *arrayOpened)
 {
-    char *bufferString = calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
+    char *bufferString = (char*) calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
     if (bufferString == NULL)
     {
         //Allocation verification
@@ -2537,7 +2537,7 @@ void openTXTInt8Array(const char *filename, int8Array *arrayOpened)
 
 void openTXTInt16Array(const char *filename, int16Array *arrayOpened)
 {
-    char *bufferString = calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
+    char *bufferString = (char*) calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
     if (bufferString == NULL)
     {
         //Allocation verification
@@ -2675,7 +2675,7 @@ void openTXTInt16Array(const char *filename, int16Array *arrayOpened)
 
 void openTXTInt32Array(const char *filename, int32Array *arrayOpened)
 {
-    char *bufferString = calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
+    char *bufferString = (char*) calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
     if (bufferString == NULL)
     {
         //Allocation verification
@@ -2806,7 +2806,7 @@ void openTXTInt32Array(const char *filename, int32Array *arrayOpened)
 
 void openTXTInt64Array(const char *filename, int64Array *arrayOpened)
 {
-    char *bufferString = calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
+    char *bufferString = (char*) calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
     if (bufferString == NULL)
     {
         //Allocation verification
@@ -2939,7 +2939,7 @@ void openTXTInt64Array(const char *filename, int64Array *arrayOpened)
 
 void openTXTUInt8Array(const char *filename, uint8Array *arrayOpened)
 {
-    char *bufferString = calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
+    char *bufferString = (char*) calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
     if (bufferString == NULL)
     {
         //Allocation verification
@@ -3077,7 +3077,7 @@ void openTXTUInt8Array(const char *filename, uint8Array *arrayOpened)
 
 void openTXTUInt16Array(const char *filename, uint16Array *arrayOpened)
 {
-    char *bufferString = calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
+    char *bufferString = (char*) calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
     if (bufferString == NULL)
     {
         //Allocation verification
@@ -3215,7 +3215,7 @@ void openTXTUInt16Array(const char *filename, uint16Array *arrayOpened)
 
 void openTXTUInt32Array(const char *filename, uint32Array *arrayOpened)
 {
-    char *bufferString = calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
+    char *bufferString = (char*) calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
     if (bufferString == NULL)
     {
         //Allocation verification
@@ -3346,7 +3346,7 @@ void openTXTUInt32Array(const char *filename, uint32Array *arrayOpened)
 
 void openTXTUInt64Array(const char *filename, uint64Array *arrayOpened)
 {
-    char *bufferString = calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
+    char *bufferString = (char*) calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
     if (bufferString == NULL)
     {
         //Allocation verification
@@ -3479,7 +3479,7 @@ void openTXTUInt64Array(const char *filename, uint64Array *arrayOpened)
 
 void openTXTFloatArray(const char *filename, floatArray *arrayOpened)
 {
-    char *bufferString = calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
+    char *bufferString = (char*) calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
     if (bufferString == NULL)
     {
         //Allocation verification
@@ -3610,7 +3610,7 @@ void openTXTFloatArray(const char *filename, floatArray *arrayOpened)
 
 void openTXTDoubleArray(const char *filename, doubleArray *arrayOpened)
 {
-    char *bufferString = calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
+    char *bufferString = (char*) calloc(STRING_SIZE_BASE_10_UINT64, BYTESIZE_INT8);
     if (bufferString == NULL)
     {
         //Allocation verification
