@@ -27,7 +27,14 @@
 
 /* Preprocessor constants ============================================== */
 
-
+// TXT array type flags //
+#define IS_INT          1U
+#define IS_UINT         2U
+#define IS_FLT          4U
+#define IS_8_BITS       8U
+#define IS_16_BITS      16U
+#define IS_32_BITS      32U
+#define IS_64_BITS      64U
 
 /* Global variables ==================================================== */
 
@@ -582,6 +589,8 @@ void openDoubleArray(const char *filename, doubleArray *arrayOpened);
 /*! \fn         void writeTXTInt8Array(const int8Array *arrayToWrite)
     \brief      Writes a user int8Array in a text (.txt) file
     \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
+
+    Document format elements in order : An 8-bit unsigned integer (7 bits bitfield) representing the type of array with flags ; The size of the array in a 64-bit unsigned integer ; the values inside the array (one line per element)
     \param[in]  arrayToWrite    The address of the int8Array which will be written
 */
 void writeTXTInt8Array(const int8Array *arrayToWrite);
@@ -589,6 +598,8 @@ void writeTXTInt8Array(const int8Array *arrayToWrite);
 /*! \fn         void writeTXTInt16Array(const int16Array *arrayToWrite)
     \brief      Writes a user int16Array in a text (.txt) file
     \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
+
+    Document format elements in order : An 8-bit unsigned integer (7 bits bitfield) representing the type of array with flags ; The size of the array in a 64-bit unsigned integer ; the values inside the array (one line per element)
     \param[in]  arrayToWrite    The address of the int16Array which will be written
 */
 void writeTXTInt16Array(const int16Array *arrayToWrite);
@@ -596,6 +607,8 @@ void writeTXTInt16Array(const int16Array *arrayToWrite);
 /*! \fn         void writeTXTInt32Array(const int32Array *arrayToWrite)
     \brief      Writes a user int32Array in a text (.txt) file
     \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
+
+    Document format elements in order : An 8-bit unsigned integer (7 bits bitfield) representing the type of array with flags ; The size of the array in a 64-bit unsigned integer ; the values inside the array (one line per element)
     \param[in]  arrayToWrite    The address of the int32Array which will be written
 */
 void writeTXTInt32Array(const int32Array *arrayToWrite);
@@ -603,6 +616,8 @@ void writeTXTInt32Array(const int32Array *arrayToWrite);
 /*! \fn         void writeTXTInt64Array(const int64Array *arrayToWrite)
     \brief      Writes a user int64Array in a text (.txt) file
     \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
+
+    Document format elements in order : An 8-bit unsigned integer (7 bits bitfield) representing the type of array with flags ; The size of the array in a 64-bit unsigned integer ; the values inside the array (one line per element)
     \param[in]  arrayToWrite    The address of the int64Array which will be written
 */
 void writeTXTInt64Array(const int64Array *arrayToWrite);
@@ -612,6 +627,8 @@ void writeTXTInt64Array(const int64Array *arrayToWrite);
 /*! \fn         void writeTXTUInt8Array(const uint8Array *arrayToWrite)
     \brief      Writes a user uint8Array in a text (.txt) file
     \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
+
+    Document format elements in order : An 8-bit unsigned integer (7 bits bitfield) representing the type of array with flags ; The size of the array in a 64-bit unsigned integer ; the values inside the array (one line per element)
     \param[in]  arrayToWrite    The address of the uint8Array which will be written
 */
 void writeTXTUInt8Array(const uint8Array *arrayToWrite);
@@ -619,6 +636,8 @@ void writeTXTUInt8Array(const uint8Array *arrayToWrite);
 /*! \fn         void writeTXTUInt16Array(const uint16Array *arrayToWrite)
     \brief      Writes a user uint16Array in a text (.txt) file
     \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
+
+    Document format elements in order : An 8-bit unsigned integer (7 bits bitfield) representing the type of array with flags ; The size of the array in a 64-bit unsigned integer ; the values inside the array (one line per element)
     \param[in]  arrayToWrite    The address of the uint16Array which will be written
 */
 void writeTXTUInt16Array(const uint16Array *arrayToWrite);
@@ -626,6 +645,8 @@ void writeTXTUInt16Array(const uint16Array *arrayToWrite);
 /*! \fn         void writeTXTUInt32Array(const uint32Array *arrayToWrite)
     \brief      Writes a user uint32Array in a text (.txt) file
     \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
+
+    Document format elements in order : An 8-bit unsigned integer (7 bits bitfield) representing the type of array with flags ; The size of the array in a 64-bit unsigned integer ; the values inside the array (one line per element)
     \param[in]  arrayToWrite    The address of the uint32Array which will be written
 */
 void writeTXTUInt32Array(const uint32Array *arrayToWrite);
@@ -633,6 +654,8 @@ void writeTXTUInt32Array(const uint32Array *arrayToWrite);
 /*! \fn         void writeTXTUInt64Array(const uint64Array *arrayToWrite)
     \brief      Writes a user uint64Array in a text (.txt) file
     \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
+
+    Document format elements in order : An 8-bit unsigned integer (7 bits bitfield) representing the type of array with flags ; The size of the array in a 64-bit unsigned integer ; the values inside the array (one line per element)
     \param[in]  arrayToWrite    The address of the uint64Array which will be written
 */
 void writeTXTUInt64Array(const uint64Array *arrayToWrite);
@@ -642,6 +665,8 @@ void writeTXTUInt64Array(const uint64Array *arrayToWrite);
 /*! \fn         void writeTXTFloatArray(const floatArray *arrayToWrite)
     \brief      Writes a user floatArray in a text (.txt) file
     \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
+
+    Document format elements in order : An 8-bit unsigned integer (7 bits bitfield) representing the type of array with flags ; The size of the array in a 64-bit unsigned integer ; the values inside the array (one line per element)
     \param[in]  arrayToWrite    The address of the floatArray which will be written
 */
 void writeTXTFloatArray(const floatArray *arrayToWrite);
@@ -649,6 +674,8 @@ void writeTXTFloatArray(const floatArray *arrayToWrite);
 /*! \fn         void writeTXTDoubleArray(const doubleArray *arrayToWrite)
     \brief      Writes a user doubleArray in a text (.txt) file
     \details    Asks for the filename and then writes the file. Do not specify file extension. Cannot use folder path, only filename in current folder.
+
+    Document format elements in order : An 8-bit unsigned integer (7 bits bitfield) representing the type of array with flags ; The size of the array in a 64-bit unsigned integer ; the values inside the array (one line per element)
     \param[in]  arrayToWrite    The address of the doubleArray which will be written
 */
 void writeTXTDoubleArray(const doubleArray *arrayToWrite);
@@ -726,21 +753,25 @@ void openTXTUInt64Array(const char *filename, uint64Array *arrayOpened);
 
 //Open Float Array TXT File
 
-/*! \fn         void openFloatArray(const char *filename, floatArray *arrayOpened)
+/*! \fn         void openTXTFloatArray(const char *filename, floatArray *arrayOpened)
     \brief      Opens a user floatArray from a text (.txt) file
     \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
     \param[in]   filename       Characters string of the filename with its extension
     \param[out]  arrayOpened    The address of the floatArray which will be stored in memory
 */
-void openFloatArray(const char *filename, floatArray *arrayOpened);
+void openTXTFloatArray(const char *filename, floatArray *arrayOpened);
 
-/*! \fn         void openDoubleArray(const char *filename, doubleArray *arrayOpened)
+/*! \fn         void openTXTDoubleArray(const char *filename, doubleArray *arrayOpened)
     \brief      Opens a user doubleArray from a text (.txt) file
     \details    Asks for the filename and then opens the file and store it in memory. You must specify the file extension
     \param[in]   filename       Characters string of the filename with its extension
     \param[out]  arrayOpened    The address of the doubleArray which will be stored in memory
 */
-void openDoubleArray(const char *filename, doubleArray *arrayOpened);
+void openTXTDoubleArray(const char *filename, doubleArray *arrayOpened);
+
+
+
+
 
 //Maximum in array
 

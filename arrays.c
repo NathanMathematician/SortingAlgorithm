@@ -1736,6 +1736,14 @@ void writeTXTInt8Array(const int8Array *arrayToWrite)
         }while(success != 1); //Repeat until the file is opened
 
         /* Write to file */
+        //Write array type code
+        if(fprintf(arrayFile, "%u\n", IS_INT | IS_8_BITS) == EOF)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in writeTXTInt8Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
         //Write the size
         if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
         {
@@ -1805,6 +1813,14 @@ void writeTXTInt16Array(const int16Array *arrayToWrite)
         }while(success != 1); //Repeat until the file is opened
 
         /* Write to file */
+        //Write array type code
+        if(fprintf(arrayFile, "%u\n", IS_INT | IS_16_BITS) == EOF)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in writeTXTInt8Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
         //Write the size
         if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
         {
@@ -1874,6 +1890,14 @@ void writeTXTInt32Array(const int32Array *arrayToWrite)
         }while(success != 1); //Repeat until the file is opened
 
         /* Write to file */
+        //Write array type code
+        if(fprintf(arrayFile, "%u\n", IS_INT | IS_32_BITS) == EOF)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in writeTXTInt8Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
         //Write the size
         if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
         {
@@ -1943,6 +1967,14 @@ void writeTXTInt64Array(const int64Array *arrayToWrite)
         }while(success != 1); //Repeat until the file is opened
 
         /* Write to file */
+        //Write array type code
+        if(fprintf(arrayFile, "%u\n", IS_INT | IS_64_BITS) == EOF)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in writeTXTInt8Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
         //Write the size
         if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
         {
@@ -2014,6 +2046,14 @@ void writeTXTUInt8Array(const uint8Array *arrayToWrite)
         }while(success != 1); //Repeat until the file is opened
 
         /* Write to file */
+        //Write array type code
+        if(fprintf(arrayFile, "%u\n", IS_UINT | IS_8_BITS) == EOF)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in writeTXTInt8Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
         //Write the size
         if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
         {
@@ -2083,6 +2123,14 @@ void writeTXTUInt16Array(const uint16Array *arrayToWrite)
         }while(success != 1); //Repeat until the file is opened
 
         /* Write to file */
+        //Write array type code
+        if(fprintf(arrayFile, "%u\n", IS_UINT | IS_16_BITS) == EOF)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in writeTXTInt8Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
         //Write the size
         if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
         {
@@ -2152,6 +2200,14 @@ void writeTXTUInt32Array(const uint32Array *arrayToWrite)
         }while(success != 1); //Repeat until the file is opened
 
         /* Write to file */
+        //Write array type code
+        if(fprintf(arrayFile, "%u\n", IS_UINT | IS_32_BITS) == EOF)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in writeTXTInt8Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
         //Write the size
         if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
         {
@@ -2221,6 +2277,14 @@ void writeTXTUInt64Array(const uint64Array *arrayToWrite)
         }while(success != 1); //Repeat until the file is opened
 
         /* Write to file */
+        //Write array type code
+        if(fprintf(arrayFile, "%u\n", IS_UINT | IS_64_BITS) == EOF)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in writeTXTInt8Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
         //Write the size
         if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
         {
@@ -2292,6 +2356,14 @@ void writeTXTFloatArray(const floatArray *arrayToWrite)
         }while(success != 1); //Repeat until the file is opened
 
         /* Write to file */
+        //Write array type code
+        if(fprintf(arrayFile, "%u\n", IS_FLT | IS_32_BITS) == EOF)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in writeTXTInt8Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
         //Write the size
         if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
         {
@@ -2361,6 +2433,14 @@ void writeTXTDoubleArray(const doubleArray *arrayToWrite)
         }while(success != 1); //Repeat until the file is opened
 
         /* Write to file */
+        //Write array type code
+        if(fprintf(arrayFile, "%u\n", IS_FLT | IS_64_BITS) == EOF)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in writeTXTInt8Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
         //Write the size
         if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
         {
@@ -2423,6 +2503,15 @@ void openTXTInt8Array(const char *filename, int8Array *arrayOpened)
     else
     {
         /* Read from file */
+
+        //Skip the array type code. The verification is done outside of the function
+        if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in openTXTInt8Array (fgets) : %s\nCannot read arrayType code from arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
         //Read the size
         numberOfElements arraySize = 0;
 
@@ -2561,6 +2650,15 @@ void openTXTInt16Array(const char *filename, int16Array *arrayOpened)
     else
     {
         /* Read from file */
+
+        //Skip the array type code. The verification is done outside of the function
+        if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in openTXTInt8Array (fgets) : %s\nCannot read arrayType code from arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
         //Read the size
         numberOfElements arraySize = 0;
 
@@ -2699,6 +2797,15 @@ void openTXTInt32Array(const char *filename, int32Array *arrayOpened)
     else
     {
         /* Read from file */
+
+        //Skip the array type code. The verification is done outside of the function
+        if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in openTXTInt8Array (fgets) : %s\nCannot read arrayType code from arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
         //Read the size
         numberOfElements arraySize = 0;
 
@@ -2830,6 +2937,15 @@ void openTXTInt64Array(const char *filename, int64Array *arrayOpened)
     else
     {
         /* Read from file */
+
+        //Skip the array type code. The verification is done outside of the function
+        if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in openTXTInt8Array (fgets) : %s\nCannot read arrayType code from arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
         //Read the size
         numberOfElements arraySize = 0;
 
@@ -2963,6 +3079,15 @@ void openTXTUInt8Array(const char *filename, uint8Array *arrayOpened)
     else
     {
         /* Read from file */
+
+        //Skip the array type code. The verification is done outside of the function
+        if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in openTXTInt8Array (fgets) : %s\nCannot read arrayType code from arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
         //Read the size
         numberOfElements arraySize = 0;
 
@@ -3101,6 +3226,15 @@ void openTXTUInt16Array(const char *filename, uint16Array *arrayOpened)
     else
     {
         /* Read from file */
+
+        //Skip the array type code. The verification is done outside of the function
+        if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in openTXTInt8Array (fgets) : %s\nCannot read arrayType code from arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
         //Read the size
         numberOfElements arraySize = 0;
 
@@ -3239,6 +3373,15 @@ void openTXTUInt32Array(const char *filename, uint32Array *arrayOpened)
     else
     {
         /* Read from file */
+
+        //Skip the array type code. The verification is done outside of the function
+        if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in openTXTInt8Array (fgets) : %s\nCannot read arrayType code from arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
         //Read the size
         numberOfElements arraySize = 0;
 
@@ -3370,6 +3513,15 @@ void openTXTUInt64Array(const char *filename, uint64Array *arrayOpened)
     else
     {
         /* Read from file */
+
+        //Skip the array type code. The verification is done outside of the function
+        if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in openTXTInt8Array (fgets) : %s\nCannot read arrayType code from arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
         //Read the size
         numberOfElements arraySize = 0;
 
@@ -3503,6 +3655,15 @@ void openTXTFloatArray(const char *filename, floatArray *arrayOpened)
     else
     {
         /* Read from file */
+
+        //Skip the array type code. The verification is done outside of the function
+        if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in openTXTInt8Array (fgets) : %s\nCannot read arrayType code from arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
         //Read the size
         numberOfElements arraySize = 0;
 
@@ -3634,6 +3795,15 @@ void openTXTDoubleArray(const char *filename, doubleArray *arrayOpened)
     else
     {
         /* Read from file */
+
+        //Skip the array type code. The verification is done outside of the function
+        if(fgets(bufferString, STRING_SIZE_BASE_10_UINT64, arrayFile) == NULL)
+        {
+            /* Handle error */
+            fprintf(stderr, "Error in openTXTInt8Array (fgets) : %s\nCannot read arrayType code from arrayFile.\n", strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+
         //Read the size
         numberOfElements arraySize = 0;
 

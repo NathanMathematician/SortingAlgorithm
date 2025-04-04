@@ -5139,8 +5139,127 @@ void sortVerificationDoubleArray(doubleArray *toVerify, int8_t *verifBool)
 }
 
 
+// Size verification //
 
+int8_t verifyInt8ArraySize(int8Array *toVerify)
+{
+    if (toVerify->size > 1)
+    {
+        return BOOL_TRUE;
+    }
+    else
+    {
+        return BOOL_FALSE;
+    }
+}
 
+int8_t verifyInt16ArraySize(int16Array *toVerify)
+{
+    if (toVerify->size > 1)
+    {
+        return BOOL_TRUE;
+    }
+    else
+    {
+        return BOOL_FALSE;
+    }
+}
+
+int8_t verifyInt32ArraySize(int32Array *toVerify)
+{
+    if (toVerify->size > 1)
+    {
+        return BOOL_TRUE;
+    }
+    else
+    {
+        return BOOL_FALSE;
+    }
+}
+
+int8_t verifyInt64ArraySize(int64Array *toVerify)
+{
+    if (toVerify->size > 1)
+    {
+        return BOOL_TRUE;
+    }
+    else
+    {
+        return BOOL_FALSE;
+    }
+}
+
+int8_t verifyUInt8ArraySize(uint8Array *toVerify)
+{
+    if (toVerify->size > 1)
+    {
+        return BOOL_TRUE;
+    }
+    else
+    {
+        return BOOL_FALSE;
+    }
+}
+
+int8_t verifyUInt16ArraySize(uint16Array *toVerify)
+{
+    if (toVerify->size > 1)
+    {
+        return BOOL_TRUE;
+    }
+    else
+    {
+        return BOOL_FALSE;
+    }
+}
+
+int8_t verifyUInt32ArraySize(uint32Array *toVerify)
+{
+    if (toVerify->size > 1)
+    {
+        return BOOL_TRUE;
+    }
+    else
+    {
+        return BOOL_FALSE;
+    }
+}
+
+int8_t verifyUInt64ArraySize(uint64Array *toVerify)
+{
+    if (toVerify->size > 1)
+    {
+        return BOOL_TRUE;
+    }
+    else
+    {
+        return BOOL_FALSE;
+    }
+}
+
+int8_t verifyFloatArraySize(floatArray *toVerify)
+{
+    if (toVerify->size > 1)
+    {
+        return BOOL_TRUE;
+    }
+    else
+    {
+        return BOOL_FALSE;
+    }
+}
+
+int8_t verifyDoubleArraySize(doubleArray *toVerify)
+{
+    if (toVerify->size > 1)
+    {
+        return BOOL_TRUE;
+    }
+    else
+    {
+        return BOOL_FALSE;
+    }
+}
 
 
 

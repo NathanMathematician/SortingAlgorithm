@@ -803,7 +803,86 @@ void sortVerificationFloatArray(floatArray *toVerify, int8_t *verifBool);
 void sortVerificationDoubleArray(doubleArray *toVerify, int8_t *verifBool);
 
 
+// Size verification //
+/*! \fn         int8_t verifyInt8ArraySize(int8Array *toVerify)
+    \brief      Verifies if an array at least two elements
+    \details    If array size is at least two verifBool get value TRUE
+    \param  toVerify[in]    Array to be verified
+    \returns    Resulting boolean (1 = TRUE)
+*/
+int8_t verifyInt8ArraySize(int8Array *toVerify);
 
+/*! \fn         int8_t verifyInt16ArraySize(int16Array *toVerify)
+    \brief      Verifies if an array at least two elements
+    \details    If array size is at least two verifBool get value TRUE
+    \param  toVerify[in]    Array to be verified
+    \returns    Resulting boolean (1 = TRUE)
+*/
+int8_t verifyInt16ArraySize(int16Array *toVerify);
+
+/*! \fn         int8_t verifyInt32ArraySize(int32Array *toVerify)
+    \brief      Verifies if an array at least two elements
+    \details    If array size is at least two verifBool get value TRUE
+    \param  toVerify[in]    Array to be verified
+    \returns    Resulting boolean (1 = TRUE)
+*/
+int8_t verifyInt32ArraySize(int32Array *toVerify);
+
+/*! \fn         int8_t verifyInt64ArraySize(int64Array *toVerify)
+    \brief      Verifies if an array at least two elements
+    \details    If array size is at least two verifBool get value TRUE
+    \param  toVerify[in]    Array to be verified
+    \returns    Resulting boolean (1 = TRUE)
+*/
+int8_t verifyInt64ArraySize(int64Array *toVerify);
+
+/*! \fn         int8_t verifyUInt8ArraySize(uint8Array *toVerify)
+    \brief      Verifies if an array at least two elements
+    \details    If array size is at least two verifBool get value TRUE
+    \param  toVerify[in]    Array to be verified
+    \returns    Resulting boolean (1 = TRUE)
+*/
+int8_t verifyUInt8ArraySize(uint8Array *toVerify);
+
+/*! \fn         int8_t verifyUInt16ArraySize(uint16Array *toVerify)
+    \brief      Verifies if an array at least two elements
+    \details    If array size is at least two verifBool get value TRUE
+    \param  toVerify[in]    Array to be verified
+    \returns    Resulting boolean (1 = TRUE)
+*/
+int8_t verifyUInt16ArraySize(uint16Array *toVerify);
+
+/*! \fn         int8_t verifyUInt32ArraySize(uint32Array *toVerify)
+    \brief      Verifies if an array at least two elements
+    \details    If array size is at least two verifBool get value TRUE
+    \param  toVerify[in]    Array to be verified
+    \returns    Resulting boolean (1 = TRUE)
+*/
+int8_t verifyUInt32ArraySize(uint32Array *toVerify);
+
+/*! \fn         int8_t verifyUInt64ArraySize(uint64Array *toVerify)
+    \brief      Verifies if an array at least two elements
+    \details    If array size is at least two verifBool get value TRUE
+    \param  toVerify[in]    Array to be verified
+    \returns    Resulting boolean (1 = TRUE)
+*/
+int8_t verifyUInt64ArraySize(uint64Array *toVerify);
+
+/*! \fn         int8_t verifyFLTArraySize(floatArray *toVerify)
+    \brief      Verifies if an array at least two elements
+    \details    If array size is at least two verifBool get value TRUE
+    \param  toVerify[in]    Array to be verified
+    \returns    Resulting boolean (1 = TRUE)
+*/
+int8_t verifyFloatArraySize(floatArray *toVerify);
+
+/*! \fn         int8_t verifyDoubleArraySize(doubleArray *toVerify)
+    \brief      Verifies if an array at least two elements
+    \details    If array size is at least two verifBool get value TRUE
+    \param  toVerify[in]    Array to be verified
+    \returns    Resulting boolean (1 = TRUE)
+*/
+int8_t verifyDoubleArraySize(doubleArray *toVerify);
 
 
 
