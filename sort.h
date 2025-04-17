@@ -28,17 +28,17 @@
 /* Preprocessor constants ============================================== */
 
 /*! \def UINT8_NUMBER_OF_VALUES
-    \brief Shortcut for sizeof(int64_t) or sizeof(uint64_t)
+    \brief Shortcut for sizeof(int8_t) or sizeof(uint8_t)
 */
 #define UINT8_NUMBER_OF_VALUES          256ULL
 
 /*! \def UINT16_NUMBER_OF_VALUES
-    \brief Shortcut for sizeof(int64_t) or sizeof(uint64_t)
+    \brief Shortcut for sizeof(int16_t) or sizeof(uint16_t)
 */
 #define UINT16_NUMBER_OF_VALUES          65536ULL
 
 /*! \def UINT32_NUMBER_OF_VALUES
-    \brief Shortcut for sizeof(int64_t) or sizeof(uint64_t)
+    \brief Shortcut for sizeof(int32_t) or sizeof(uint32_t)
 */
 #define UINT32_NUMBER_OF_VALUES          4294967296ULL
 
@@ -696,6 +696,21 @@ void sortCountingInt8Array(int8Array *inputArray, int8Array *arraySorted);
 */
 void sortCountingInt16Array(int16Array *inputArray, int16Array *arraySorted);
 
+/*! \fn         void sortCountingInt32Array(int32Array *inputArray, int32Array *arraySorted)
+    \brief      Sorts an array of 32 bits integers
+    \details    Sorts an array of 32 bits integers in increasing order using comparisons
+                Best case complexity: N/A
+                Average complexity: O(n + B) [B is the size of the elements, in number of bits]
+                Worst case complexity: O(n + B) [B is the size of the elements, in number of bits]
+                Stable: Yes
+                Space complexity (memory): O(n) total & O(2^B) auxiliary [B is the size of the elements, in number of bits] !!WARNING!! for 32-bits words it uses 4GB of auxiliary memory
+                In-place : No
+                Recursive: No
+    \param  inputArray[in]      Array to be sorted
+    \param  arraySorted[out]    Result array after sort
+*/
+void sortCountingInt32Array(int32Array *inputArray, int32Array *arraySorted);
+
 //Counting Sort Unsigned Int
 
 /*! \fn         void sortCountingUInt8Array(uint8Array *inputArray, uint8Array *arraySorted)
@@ -727,6 +742,38 @@ void sortCountingUInt8Array(uint8Array *inputArray, uint8Array *arraySorted);
     \param  arraySorted[out]    Result array after sort
 */
 void sortCountingUInt16Array(uint16Array *inputArray, uint16Array *arraySorted);
+
+/*! \fn         void sortCountingUInt32Array(uint32Array *inputArray, uint32Array *arraySorted)
+    \brief      Sorts an array of 32 bits unsigned integers
+    \details    Sorts an array of 32 bits unsigned integers in increasing order using comparisons
+                Best case complexity: N/A
+                Average complexity: O(n + B) [B is the size of the elements, in number of bits]
+                Worst case complexity: O(n + B) [B is the size of the elements, in number of bits]
+                Stable: Yes
+                Space complexity (memory): O(n) total & O(2^B) auxiliary [B is the size of the elements, in number of bits] !!WARNING!! for 32-bits words it uses 4GB of auxiliary memory
+                In-place : No
+                Recursive: No
+    \param  inputArray[in]      Array to be sorted
+    \param  arraySorted[out]    Result array after sort
+*/
+void sortCountingUInt32Array(uint32Array *inputArray, uint32Array *arraySorted);
+
+//Counting Sort Float Array
+
+/*! \fn         void sortCountingFloatArray(floatArray *inputArray, floatArray *arraySorted)
+    \brief      Sorts an array of floats (32-bits floating point)
+    \details    Sorts an array of floats (32-bits floating point) in increasing order using comparisons
+                Best case complexity: N/A
+                Average complexity: O(n + B) [B is the size of the elements, in number of bits]
+                Worst case complexity: O(n + B) [B is the size of the elements, in number of bits]
+                Stable: Yes
+                Space complexity (memory): O(n) total & O(2^B) auxiliary [B is the size of the elements, in number of bits] !!WARNING!! for 32-bits words it uses 4GB of auxiliary memory
+                In-place : No
+                Recursive: No
+    \param  inputArray[in]      Array to be sorted
+    \param  arraySorted[out]    Result array after sort
+*/
+void sortCountingFloatArray(floatArray *inputArray, floatArray *arraySorted);
 
 
 

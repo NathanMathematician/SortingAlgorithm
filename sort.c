@@ -4148,6 +4148,46 @@ void sortCountingInt16Array(int16Array *inputArray, int16Array *arraySorted)
     }
 }
 
+void sortCountingInt32Array(int32Array *inputArray, int32Array *arraySorted)
+{
+    uint32_t helperArray[UINT32_NUMBER_OF_VALUES] = {0};
+    
+    numberOfElements positionCounter = 0;
+    for (positionCounter = 0 ; positionCounter < inputArray->size ; positionCounter++)
+    {
+        helperArray[(uint32_t) inputArray->array[positionCounter]]++;
+    }
+
+    initializeInt32Array(&(inputArray->size), arraySorted);
+
+    numberOfElements sortCounter = 0;
+    numberOfElements multiplicityCounter = 0;
+
+    for (positionCounter = UINT32_NUMBER_OF_VALUES / 2ULL ; positionCounter < UINT32_NUMBER_OF_VALUES ; positionCounter++)
+    {
+        multiplicityCounter = 0;
+        while(multiplicityCounter < helperArray[positionCounter])
+        {
+            arraySorted->array[sortCounter] = (int32_t) positionCounter;
+            multiplicityCounter++;
+            sortCounter++;
+        }
+    }
+
+    sortCounter = inputArray->size - 1;
+
+    for (positionCounter = UINT32_NUMBER_OF_VALUES / 2ULL - 1ULL ; positionCounter < UINT32_NUMBER_OF_VALUES / 2ULL ; positionCounter--)
+    {
+        multiplicityCounter = 0;
+        while(multiplicityCounter < helperArray[positionCounter])
+        {
+            arraySorted->array[sortCounter] = (int32_t) positionCounter;
+            multiplicityCounter++;
+            sortCounter--;
+        }
+    }
+}
+
 //Counting Sort Unsigned
 
 void sortCountingUInt8Array(uint8Array *inputArray, uint8Array *arraySorted)
@@ -4204,6 +4244,74 @@ void sortCountingUInt16Array(uint16Array *inputArray, uint16Array *arraySorted)
     }
 }
 
+void sortCountingUInt32Array(uint32Array *inputArray, uint32Array *arraySorted)
+{
+    uint32_t helperArray[UINT32_NUMBER_OF_VALUES] = {0};
+    
+    numberOfElements positionCounter = 0;
+    for (positionCounter = 0 ; positionCounter < inputArray->size ; positionCounter++)
+    {
+        helperArray[inputArray->array[positionCounter]]++;
+    }
+
+    initializeUInt32Array(&(inputArray->size), arraySorted);
+
+    numberOfElements sortCounter = 0;
+    numberOfElements multiplicityCounter = 0;
+
+    for (positionCounter = 0 ; positionCounter < UINT32_NUMBER_OF_VALUES ; positionCounter++)
+    {
+        multiplicityCounter = 0;
+        while(multiplicityCounter < helperArray[positionCounter])
+        {
+            arraySorted->array[sortCounter] = positionCounter;
+            multiplicityCounter++;
+            sortCounter++;
+        }
+    }
+}
+
+//Counting Sort Float
+
+void sortCountingFloatArray(floatArray *inputArray, floatArray *arraySorted)
+{
+    uint8_t *helperArray = (uint8_t *) malloc(UINT32_NUMBER_OF_VALUES);
+    
+    numberOfElements positionCounter = 0;
+    for (positionCounter = 0 ; positionCounter < inputArray->size ; positionCounter++)
+    {
+        helperArray[*((uint32_t *) (inputArray->array + positionCounter))]++;
+    }
+
+    initializeFloatArray(&(inputArray->size), arraySorted);
+
+    numberOfElements sortCounter = 0;
+    numberOfElements multiplicityCounter = 0;
+
+    for (positionCounter = UINT32_NUMBER_OF_VALUES / 2ULL ; positionCounter < UINT32_NUMBER_OF_VALUES ; positionCounter++)
+    {
+        multiplicityCounter = 0;
+        while(multiplicityCounter < helperArray[positionCounter])
+        {
+            arraySorted->array[sortCounter] = (float_t) positionCounter;
+            multiplicityCounter++;
+            sortCounter++;
+        }
+    }
+
+    sortCounter = inputArray->size - 1;
+
+    for (positionCounter = UINT32_NUMBER_OF_VALUES / 2ULL - 1ULL ; positionCounter < UINT32_NUMBER_OF_VALUES / 2ULL ; positionCounter--)
+    {
+        multiplicityCounter = 0;
+        while(multiplicityCounter < helperArray[positionCounter])
+        {
+            arraySorted->array[sortCounter] = (float_t) positionCounter;
+            multiplicityCounter++;
+            sortCounter--;
+        }
+    }
+}
 
 
 //Miscellaneous

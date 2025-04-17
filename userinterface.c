@@ -680,6 +680,7 @@ void UIsortArray()
                             printf("\n2.Merge Sort");
                             printf("\n3.Heapsort");
                             printf("\n4.Radix Sort\n");
+                            printf("\n5.Counting Sort\n");
                         
                             choiceValue = 0;
                             readUInt8(&choiceValue);
@@ -703,6 +704,10 @@ void UIsortArray()
                                     break;
                                 case 4:
                                     sortRadixLSBInt32Array(&arrayOpened);
+                                    break;
+                                case 5:
+                                    sortCountingInt32Array(&arrayOpened, &arraySorted);
+                                    arrayOpened.array = arraySorted.array;
                                     break;
                                 default:
                                     break;
@@ -737,7 +742,6 @@ void UIsortArray()
                     else
                     {
                         int64Array arrayOpened;
-                        int64Array arraySorted;
                 
                         openInt64Array(filename, &arrayOpened);
                         
@@ -965,6 +969,7 @@ void UIsortArray()
                             printf("\n2.Merge Sort");
                             printf("\n3.Heapsort");
                             printf("\n4.Radix Sort\n");
+                            printf("\n5.Counting Sort\n");
                         
                             choiceValue = 0;
                             readUInt8(&choiceValue);
@@ -988,6 +993,10 @@ void UIsortArray()
                                     break;
                                 case 4:
                                     sortRadixLSBUInt32Array(&arrayOpened);
+                                    break;
+                                case 5:
+                                    sortCountingUInt32Array(&arrayOpened, &arraySorted);
+                                    arrayOpened.array = arraySorted.array;
                                     break;
                                 default:
                                     break;
@@ -1022,7 +1031,6 @@ void UIsortArray()
                     else
                     {
                         uint64Array arrayOpened;
-                        uint64Array arraySorted;
                 
                         openUInt64Array(filename, &arrayOpened);
                         
@@ -1104,6 +1112,7 @@ void UIsortArray()
                             printf("\n2.Merge Sort");
                             printf("\n3.Heapsort");
                             printf("\n4.Radix Sort\n");
+                            printf("\n5.Counting Sort\n");
                         
                             choiceValue = 0;
                             readUInt8(&choiceValue);
@@ -1127,6 +1136,10 @@ void UIsortArray()
                                     break;
                                 case 4:
                                     sortRadixLSBFloatArray(&arrayOpened);
+                                    break;
+                                case 5:
+                                    sortCountingFloatArray(&arrayOpened, &arraySorted);
+                                    arrayOpened.array = arraySorted.array;
                                     break;
                                 default:
                                     break;
@@ -1161,7 +1174,6 @@ void UIsortArray()
                     else
                     {
                         doubleArray arrayOpened;
-                        doubleArray arraySorted;
                 
                         openDoubleArray(filename, &arrayOpened);
                         
@@ -1391,6 +1403,7 @@ void UIsortArray()
             printf("\n2.Merge Sort");
             printf("\n3.Heapsort");
             printf("\n4.Radix Sort\n");
+            printf("\n5.Counting Sort\n");
         
             choiceValue = 0;
             readUInt8(&choiceValue);
@@ -1414,6 +1427,10 @@ void UIsortArray()
                     break;
                 case 4:
                     sortRadixLSBInt32Array(&arrayOpened);
+                    break;
+                case 5:
+                    sortCountingInt32Array(&arrayOpened, &arraySorted);
+                    arrayOpened.array = arraySorted.array;
                     break;
                 default:
                     break;
@@ -1448,7 +1465,6 @@ void UIsortArray()
     else if (strncmp(fileExtension, ".i64arr", 9U) == 0)
     {
         int64Array arrayOpened;
-        int64Array arraySorted;
 
         openInt64Array(filename, &arrayOpened);
                         
@@ -1673,6 +1689,7 @@ void UIsortArray()
             printf("\n2.Merge Sort");
             printf("\n3.Heapsort");
             printf("\n4.Radix Sort\n");
+            printf("\n5.Counting Sort\n");
         
             choiceValue = 0;
             readUInt8(&choiceValue);
@@ -1696,6 +1713,10 @@ void UIsortArray()
                     break;
                 case 4:
                     sortRadixLSBUInt32Array(&arrayOpened);
+                    break;
+                case 5:
+                    sortCountingUInt32Array(&arrayOpened, &arraySorted);
+                    arrayOpened.array = arraySorted.array;
                     break;
                 default:
                     break;
@@ -1730,7 +1751,6 @@ void UIsortArray()
     else if (strncmp(fileExtension, ".ui64arr", 10U) == 0)
     {
         uint64Array arrayOpened;
-        uint64Array arraySorted;
 
         openUInt64Array(filename, &arrayOpened);
                         
@@ -1809,6 +1829,7 @@ void UIsortArray()
             printf("\n2.Merge Sort");
             printf("\n3.Heapsort");
             printf("\n4.Radix Sort\n");
+            printf("\n5.Counting Sort\n");
         
             choiceValue = 0;
             readUInt8(&choiceValue);
@@ -1833,6 +1854,9 @@ void UIsortArray()
                 case 4:
                     sortRadixLSBFloatArray(&arrayOpened);
                     break;
+                case 5:
+                    sortCountingFloatArray(&arrayOpened, &arraySorted);
+                    arrayOpened.array = arraySorted.array;
                 default:
                     break;
             }
@@ -1866,7 +1890,6 @@ void UIsortArray()
     else if (strncmp(fileExtension, ".dblarr", 9U) == 0)
     {
         doubleArray arrayOpened;
-        doubleArray arraySorted;
 
         openDoubleArray(filename, &arrayOpened);
                         
@@ -1942,7 +1965,7 @@ void UIconvertArray()
 
     char *fileExtension = strchr(filename, '.');
     
-    int8_t choiceValue = 0;
+    uint8_t choiceValue = 0;
 
     if (strncmp(fileExtension, ".txt", 5U) == 0)
     {
@@ -2017,7 +2040,6 @@ void UIconvertArray()
                     if (arrayType & IS_8_BITS)
                     {
                         int8Array arrayOpened;
-                        int8Array arraySorted;
                 
                         openTXTInt8Array(filename, &arrayOpened);
 
@@ -2049,7 +2071,6 @@ void UIconvertArray()
                     else if (arrayType & IS_16_BITS)
                     {
                         int16Array arrayOpened;
-                        int16Array arraySorted;
                 
                         openTXTInt16Array(filename, &arrayOpened);
 
@@ -2081,7 +2102,6 @@ void UIconvertArray()
                     else if (arrayType & IS_32_BITS)
                     {
                         int32Array arrayOpened;
-                        int32Array arraySorted;
                 
                         openTXTInt32Array(filename, &arrayOpened);
 
@@ -2113,7 +2133,6 @@ void UIconvertArray()
                     else
                     {
                         int64Array arrayOpened;
-                        int64Array arraySorted;
                 
                         openTXTInt64Array(filename, &arrayOpened);
 
@@ -2148,7 +2167,6 @@ void UIconvertArray()
                     if (arrayType & IS_8_BITS)
                     {
                         uint8Array arrayOpened;
-                        uint8Array arraySorted;
                 
                         openTXTUInt8Array(filename, &arrayOpened);
 
@@ -2180,7 +2198,6 @@ void UIconvertArray()
                     else if (arrayType & IS_16_BITS)
                     {
                         uint16Array arrayOpened;
-                        uint16Array arraySorted;
                 
                         openTXTUInt16Array(filename, &arrayOpened);
 
@@ -2212,7 +2229,6 @@ void UIconvertArray()
                     else if (arrayType & IS_32_BITS)
                     {
                         uint32Array arrayOpened;
-                        uint32Array arraySorted;
                 
                         openTXTUInt32Array(filename, &arrayOpened);
 
@@ -2244,7 +2260,6 @@ void UIconvertArray()
                     else
                     {
                         uint64Array arrayOpened;
-                        uint64Array arraySorted;
                 
                         openTXTUInt64Array(filename, &arrayOpened);
 
@@ -2279,7 +2294,6 @@ void UIconvertArray()
                     if (arrayType & IS_32_BITS)
                     {
                         floatArray arrayOpened;
-                        floatArray arraySorted;
                 
                         openTXTFloatArray(filename, &arrayOpened);
 
@@ -2311,7 +2325,6 @@ void UIconvertArray()
                     else
                     {
                         doubleArray arrayOpened;
-                        doubleArray arraySorted;
                 
                         openTXTDoubleArray(filename, &arrayOpened);
 

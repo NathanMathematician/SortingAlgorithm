@@ -134,7 +134,7 @@ inline void initializeUInt64Array(const numberOfElements *arraySize, uint64Array
     array->size = *arraySize;
 
     //Allocate memory for the structure (according to CERT C Coding Standard)
-    array->array = (uint64_t *) calloc(array->size, BYTESIZE_INT8);
+    array->array = (uint64_t *) calloc(array->size, BYTESIZE_INT64);
 
     //Memory allocation verification
     if (array->array == NULL)
@@ -151,7 +151,7 @@ inline void initializeFloatArray(const numberOfElements *arraySize, floatArray *
     array->size = *arraySize;
 
     //Allocate memory for the structure (according to CERT C Coding Standard)
-    array->array = (float *) calloc(array->size, BYTESIZE_FLOAT);
+    array->array = (float_t *) calloc(array->size, BYTESIZE_FLOAT);
 
     //Memory allocation verification
     if (array->array == NULL)
@@ -166,7 +166,7 @@ inline void initializeDoubleArray(const numberOfElements *arraySize, doubleArray
     array->size = *arraySize;
 
     //Allocate memory for the structure (according to CERT C Coding Standard)
-    array->array = (double *) calloc(array->size, BYTESIZE_DOUBLE);
+    array->array = (double_t *) calloc(array->size, BYTESIZE_DOUBLE);
 
     //Memory allocation verification
     if (array->array == NULL)
@@ -202,7 +202,7 @@ void printInt32Array(int32Array *arrayToPrint)
     numberOfElements positionCounter;
     for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter++)
     {
-        printf(" %li", arrayToPrint->array[positionCounter]);
+        printf(" %i", arrayToPrint->array[positionCounter]);
     }
 }
 
@@ -211,7 +211,7 @@ void printInt64Array(int64Array *arrayToPrint)
     numberOfElements positionCounter;
     for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter++)
     {
-        printf(" %lli", arrayToPrint->array[positionCounter]);
+        printf(" %I64i", arrayToPrint->array[positionCounter]);
     }
 }
 
@@ -240,7 +240,7 @@ void printUInt32Array(uint32Array *arrayToPrint)
     numberOfElements positionCounter;
     for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter++)
     {
-        printf(" %lu", arrayToPrint->array[positionCounter]);
+        printf(" %u", arrayToPrint->array[positionCounter]);
     }
 }
 
@@ -249,7 +249,7 @@ void printUInt64Array(uint64Array *arrayToPrint)
     numberOfElements positionCounter;
     for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter++)
     {
-        printf(" %llu", arrayToPrint->array[positionCounter]);
+        printf(" %I64u", arrayToPrint->array[positionCounter]);
     }
 }
 
@@ -260,7 +260,7 @@ void printFloatArray(floatArray *arrayToPrint)
     numberOfElements positionCounter;
     for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter++)
     {
-        printf(" %f", arrayToPrint->array[positionCounter]);
+        printf(" %e", arrayToPrint->array[positionCounter]);
     }
 }
 
@@ -269,7 +269,7 @@ void printDoubleArray(doubleArray *arrayToPrint)
     numberOfElements positionCounter;
     for (positionCounter = 0 ; positionCounter < arrayToPrint->size ; positionCounter++)
     {
-        printf(" %lf", arrayToPrint->array[positionCounter]);
+        printf(" %le", arrayToPrint->array[positionCounter]);
     }
 }
 
@@ -295,7 +295,7 @@ void readInt8Array(int8Array *inputArray)
 
     for (positionCounter = 0 ; positionCounter < arraySize ; positionCounter++)
     {
-        printf("What is the value of element number %zu?\n", positionCounter + 1);
+        printf("What is the value of element number %I64u?\n", positionCounter + 1);
         readInt8(&(inputArray->array[positionCounter]));
     }
 }
@@ -318,7 +318,7 @@ void readInt16Array(int16Array *inputArray)
 
     for (positionCounter = 0 ; positionCounter < arraySize ; positionCounter++)
     {
-        printf("What is the value of element number %zu?\n", positionCounter + 1);
+        printf("What is the value of element number %I64u?\n", positionCounter + 1);
         readInt16(&(inputArray->array[positionCounter]));
     }
 }
@@ -341,7 +341,7 @@ void readInt32Array(int32Array *inputArray)
 
     for (positionCounter = 0 ; positionCounter < arraySize ; positionCounter++)
     {
-        printf("What is the value of element number %zu?\n", positionCounter + 1);
+        printf("What is the value of element number %I64u?\n", positionCounter + 1);
         readInt32(&(inputArray->array[positionCounter]));
     }
 }
@@ -364,7 +364,7 @@ void readInt64Array(int64Array *inputArray)
 
     for (positionCounter = 0 ; positionCounter < arraySize ; positionCounter++)
     {
-        printf("What is the value of element number %zu?\n", positionCounter + 1);
+        printf("What is the value of element number %I64u?\n", positionCounter + 1);
         readInt64(&(inputArray->array[positionCounter]));
     }
 }
@@ -389,7 +389,7 @@ void readUInt8Array(uint8Array *inputArray)
 
     for (positionCounter = 0 ; positionCounter < arraySize ; positionCounter++)
     {
-        printf("What is the value of element number %zu?\n", positionCounter + 1);
+        printf("What is the value of element number %I64u?\n", positionCounter + 1);
         readUInt8(&(inputArray->array[positionCounter]));
     }
 }
@@ -412,7 +412,7 @@ void readUInt16Array(uint16Array *inputArray)
 
     for (positionCounter = 0 ; positionCounter < arraySize ; positionCounter++)
     {
-        printf("What is the value of element number %zu?\n", positionCounter + 1);
+        printf("What is the value of element number %I64u?\n", positionCounter + 1);
         readUInt16(&(inputArray->array[positionCounter]));
     }
 }
@@ -435,7 +435,7 @@ void readUInt32Array(uint32Array *inputArray)
 
     for (positionCounter = 0 ; positionCounter < arraySize ; positionCounter++)
     {
-        printf("What is the value of element number %zu?\n", positionCounter + 1);
+        printf("What is the value of element number %I64u?\n", positionCounter + 1);
         readUInt32(&(inputArray->array[positionCounter]));
     }
 }
@@ -458,7 +458,7 @@ void readUInt64Array(uint64Array *inputArray)
 
     for (positionCounter = 0 ; positionCounter < arraySize ; positionCounter++)
     {
-        printf("What is the value of element number %zu?\n", positionCounter + 1);
+        printf("What is the value of element number %I64u?\n", positionCounter + 1);
         readUInt64(&(inputArray->array[positionCounter]));
     }
 }
@@ -483,7 +483,7 @@ void readFloatArray(floatArray *inputArray)
 
     for (positionCounter = 0 ; positionCounter < arraySize ; positionCounter++)
     {
-        printf("What is the value of element number %zu?\n", positionCounter + 1);
+        printf("What is the value of element number %I64u?\n", positionCounter + 1);
         readFloat(&(inputArray->array[positionCounter]));
     }
 }
@@ -506,7 +506,7 @@ void readDoubleArray(doubleArray *inputArray)
 
     for (positionCounter = 0 ; positionCounter < arraySize ; positionCounter++)
     {
-        printf("What is the value of element number %zu?\n", positionCounter + 1);
+        printf("What is the value of element number %I64u?\n", positionCounter + 1);
         readDouble(&(inputArray->array[positionCounter]));
     }
 }
@@ -1745,7 +1745,7 @@ void writeTXTInt8Array(const int8Array *arrayToWrite)
         }
 
         //Write the size
-        if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
+        if(fprintf(arrayFile, "%I64u\n", arrayToWrite->size) == EOF)
         {
             /* Handle error */
             fprintf(stderr, "Error in writeTXTInt8Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
@@ -1822,7 +1822,7 @@ void writeTXTInt16Array(const int16Array *arrayToWrite)
         }
 
         //Write the size
-        if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
+        if(fprintf(arrayFile, "%I64u\n", arrayToWrite->size) == EOF)
         {
             /* Handle error */
             fprintf(stderr, "Error in writeTXTInt16Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
@@ -1899,7 +1899,7 @@ void writeTXTInt32Array(const int32Array *arrayToWrite)
         }
 
         //Write the size
-        if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
+        if(fprintf(arrayFile, "%I64u\n", arrayToWrite->size) == EOF)
         {
             /* Handle error */
             fprintf(stderr, "Error in writeTXTInt32Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
@@ -1910,7 +1910,7 @@ void writeTXTInt32Array(const int32Array *arrayToWrite)
         numberOfElements arrayCounter;
         for (arrayCounter = 0 ; arrayCounter < arrayToWrite->size ; arrayCounter++)
         {
-            if(fprintf(arrayFile, "%li\n", arrayToWrite->array[arrayCounter]) == EOF)
+            if(fprintf(arrayFile, "%i\n", arrayToWrite->array[arrayCounter]) == EOF)
             {
                 /* Handle error */
                 fprintf(stderr, "Error in writeTXTInt32Array (fprintf) : %s\n", strerror(errno));
@@ -1976,7 +1976,7 @@ void writeTXTInt64Array(const int64Array *arrayToWrite)
         }
 
         //Write the size
-        if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
+        if(fprintf(arrayFile, "%I64u\n", arrayToWrite->size) == EOF)
         {
             /* Handle error */
             fprintf(stderr, "Error in writeTXTInt64Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
@@ -1987,7 +1987,7 @@ void writeTXTInt64Array(const int64Array *arrayToWrite)
         numberOfElements arrayCounter;
         for (arrayCounter = 0 ; arrayCounter < arrayToWrite->size ; arrayCounter++)
         {
-            if(fprintf(arrayFile, "%lli\n", arrayToWrite->array[arrayCounter]) == EOF)
+            if(fprintf(arrayFile, "%I64i\n", arrayToWrite->array[arrayCounter]) == EOF)
             {
                 /* Handle error */
                 fprintf(stderr, "Error in writeTXTInt64Array (fprintf) : %s\n", strerror(errno));
@@ -2055,7 +2055,7 @@ void writeTXTUInt8Array(const uint8Array *arrayToWrite)
         }
 
         //Write the size
-        if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
+        if(fprintf(arrayFile, "%I64u\n", arrayToWrite->size) == EOF)
         {
             /* Handle error */
             fprintf(stderr, "Error in writeTXTUInt8Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
@@ -2132,7 +2132,7 @@ void writeTXTUInt16Array(const uint16Array *arrayToWrite)
         }
 
         //Write the size
-        if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
+        if(fprintf(arrayFile, "%I64u\n", arrayToWrite->size) == EOF)
         {
             /* Handle error */
             fprintf(stderr, "Error in writeTXTUInt16Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
@@ -2209,7 +2209,7 @@ void writeTXTUInt32Array(const uint32Array *arrayToWrite)
         }
 
         //Write the size
-        if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
+        if(fprintf(arrayFile, "%I64u\n", arrayToWrite->size) == EOF)
         {
             /* Handle error */
             fprintf(stderr, "Error in writeTXTUInt32Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
@@ -2220,7 +2220,7 @@ void writeTXTUInt32Array(const uint32Array *arrayToWrite)
         numberOfElements arrayCounter;
         for (arrayCounter = 0 ; arrayCounter < arrayToWrite->size ; arrayCounter++)
         {
-            if(fprintf(arrayFile, "%lu\n", arrayToWrite->array[arrayCounter]) == EOF)
+            if(fprintf(arrayFile, "%u\n", arrayToWrite->array[arrayCounter]) == EOF)
             {
                 /* Handle error */
                 fprintf(stderr, "Error in writeTXTUInt32Array (fprintf) : %s\n", strerror(errno));
@@ -2286,7 +2286,7 @@ void writeTXTUInt64Array(const uint64Array *arrayToWrite)
         }
 
         //Write the size
-        if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
+        if(fprintf(arrayFile, "%I64u\n", arrayToWrite->size) == EOF)
         {
             /* Handle error */
             fprintf(stderr, "Error in writeTXTUInt64Array (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
@@ -2297,7 +2297,7 @@ void writeTXTUInt64Array(const uint64Array *arrayToWrite)
         numberOfElements arrayCounter;
         for (arrayCounter = 0 ; arrayCounter < arrayToWrite->size ; arrayCounter++)
         {
-            if(fprintf(arrayFile, "%llu\n", arrayToWrite->array[arrayCounter]) == EOF)
+            if(fprintf(arrayFile, "%I64u\n", arrayToWrite->array[arrayCounter]) == EOF)
             {
                 /* Handle error */
                 fprintf(stderr, "Error in writeTXTUInt64Array (fprintf) : %s\n", strerror(errno));
@@ -2365,7 +2365,7 @@ void writeTXTFloatArray(const floatArray *arrayToWrite)
         }
 
         //Write the size
-        if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
+        if(fprintf(arrayFile, "%I64u\n", arrayToWrite->size) == EOF)
         {
             /* Handle error */
             fprintf(stderr, "Error in writeTXTFloatArray (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
@@ -2442,7 +2442,7 @@ void writeTXTDoubleArray(const doubleArray *arrayToWrite)
         }
 
         //Write the size
-        if(fprintf(arrayFile, "%zu\n", arrayToWrite->size) == EOF)
+        if(fprintf(arrayFile, "%I64u\n", arrayToWrite->size) == EOF)
         {
             /* Handle error */
             fprintf(stderr, "Error in writeTXTDoubleArray (fprintf) : %s\nCannot write arrayToWrite->size in arrayFile.\n", strerror(errno));
@@ -5776,6 +5776,163 @@ void meanHarmonicDoubleArray(const doubleArray *arrayStruct, double *mean)
 
 
 
+//Random array generator
+
+//Random Int Array
+
+void randomInt8Array(const numberOfElements *arraySize, int8Array *arrayToGenerate)
+{
+    //Initialize randomArray
+    initializeInt8Array(arraySize, arrayToGenerate);
+
+    //Generate random elements
+    srand(time(NULL));
+    
+    numberOfElements counter;
+    for (counter = 0 ; counter < *arraySize ; counter++)
+    {
+        arrayToGenerate->array[counter] = (int8_t) (rand() >> 7);
+    }
+}
+
+void randomInt16Array(const numberOfElements *arraySize, int16Array *arrayToGenerate)
+{
+    //Initialize randomArray
+    initializeInt16Array(arraySize, arrayToGenerate);
+
+    //Generate random elements
+    srand(time(NULL));
+    
+    numberOfElements counter;
+    for (counter = 0 ; counter < *arraySize ; counter++)
+    {
+        arrayToGenerate->array[counter] = (int16_t) (((uint32_t) rand()) + (((uint32_t) rand()) << 15));
+    }
+}
+
+void randomInt32Array(const numberOfElements *arraySize, int32Array *arrayToGenerate)
+{
+    //Initialize randomArray
+    initializeInt32Array(arraySize, arrayToGenerate);
+
+    //Generate random elements
+    srand(time(NULL));
+    
+    numberOfElements counter;
+    for (counter = 0 ; counter < *arraySize ; counter++)
+    {
+        arrayToGenerate->array[counter] = (int32_t) (((uint32_t) rand()) + (((uint32_t) rand()) << 15) + (((uint32_t) rand()) << 30));
+    }
+}
+
+void randomInt64Array(const numberOfElements *arraySize, int64Array *arrayToGenerate)
+{
+    //Initialize randomArray
+    initializeInt64Array(arraySize, arrayToGenerate);
+
+    //Generate random elements
+    srand(time(NULL));
+    
+    numberOfElements counter;
+    for (counter = 0 ; counter < *arraySize ; counter++)
+    {
+        arrayToGenerate->array[counter] = (int64_t) (((uint64_t) rand()) + (((uint64_t) rand()) << 15) + (((uint64_t) rand()) << 30) + (((uint64_t) rand()) << 45) + (((uint64_t) rand()) << 60));
+    }
+}
+
+//Random Unsigned Int Array
+
+void randomUInt8Array(const numberOfElements *arraySize, uint8Array *arrayToGenerate)
+{
+    //Initialize randomArray
+    initializeUInt8Array(arraySize, arrayToGenerate);
+
+    //Generate random elements
+    srand(time(NULL));
+    
+    numberOfElements counter;
+    for (counter = 0 ; counter < *arraySize ; counter++)
+    {
+        arrayToGenerate->array[counter] = (uint8_t) (rand() >> 7);
+    }
+}
+
+void randomUInt16Array(const numberOfElements *arraySize, uint16Array *arrayToGenerate)
+{
+    //Initialize randomArray
+    initializeUInt16Array(arraySize, arrayToGenerate);
+
+    //Generate random elements
+    srand(time(NULL));
+    
+    numberOfElements counter;
+    for (counter = 0 ; counter < *arraySize ; counter++)
+    {
+        arrayToGenerate->array[counter] = (uint16_t) (((uint32_t) rand()) + (((uint32_t) rand()) << 15));
+    }
+}
+
+void randomUInt32Array(const numberOfElements *arraySize, uint32Array *arrayToGenerate)
+{
+    //Initialize randomArray
+    initializeUInt32Array(arraySize, arrayToGenerate);
+
+    //Generate random elements
+    srand(time(NULL));
+    
+    numberOfElements counter;
+    for (counter = 0 ; counter < *arraySize ; counter++)
+    {
+        arrayToGenerate->array[counter] = (uint32_t) (((uint32_t) rand()) + (((uint32_t) rand()) << 15) + (((uint32_t) rand()) << 30));
+    }
+}
+
+void randomUInt64Array(const numberOfElements *arraySize, uint64Array *arrayToGenerate)
+{
+    //Initialize randomArray
+    initializeUInt64Array(arraySize, arrayToGenerate);
+
+    //Generate random elements
+    srand(time(NULL));
+    
+    numberOfElements counter;
+    for (counter = 0 ; counter < *arraySize ; counter++)
+    {
+        arrayToGenerate->array[counter] = (uint64_t) (((uint64_t) rand()) + (((uint64_t) rand()) << 15) + (((uint64_t) rand()) << 30) + (((uint64_t) rand()) << 45) + (((uint64_t) rand()) << 60));
+    }
+}
+
+//Random Float Array
+
+void randomFloatArray(const numberOfElements *arraySize, floatArray *arrayToGenerate)
+{
+    //Initialize randomArray
+    initializeFloatArray(arraySize, arrayToGenerate);
+
+    //Generate random elements
+    srand(time(NULL));
+    
+    numberOfElements counter;
+    for (counter = 0 ; counter < *arraySize ; counter++)
+    {
+        arrayToGenerate->array[counter] = (float_t) ((uint32_t) rand() + ((uint32_t) rand() << 15) + ((uint32_t) rand() << 30));
+    }
+}
+
+void randomDoubleArray(const numberOfElements *arraySize, doubleArray *arrayToGenerate)
+{
+    //Initialize randomArray
+    initializeDoubleArray(arraySize, arrayToGenerate);
+
+    //Generate random elements
+    srand(time(NULL));
+    
+    numberOfElements counter;
+    for (counter = 0 ; counter < *arraySize ; counter++)
+    {
+        arrayToGenerate->array[counter] = (double_t) (((uint64_t) rand()) + (((uint64_t) rand()) << 15) + (((uint64_t) rand()) << 30) + (((uint64_t) rand()) << 45) + (((uint64_t) rand()) << 60));
+    }
+}
 
 
 

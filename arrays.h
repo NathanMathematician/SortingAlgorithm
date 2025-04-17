@@ -19,6 +19,7 @@
 /* Included header ===================================================== */
 
 #include <math.h>
+#include <time.h>
 #include "readinput.h"
 
 /* Macros ============================================================== */
@@ -160,7 +161,7 @@ typedef struct floatArray floatArray;
 struct floatArray
 {
    numberOfElements size;     /*!< Number of elements in the array */
-   float *array;      /*!< Pointer to the first float in the array. */
+   float_t *array;      /*!< Pointer to the first float in the array. */
 };
 
 /*!
@@ -172,7 +173,7 @@ typedef struct doubleArray doubleArray;
 struct doubleArray
 {
    numberOfElements size;     /*!< Number of elements in the array */
-   double *array;      /*!< Pointer to the first double in the array. */
+   double_t *array;      /*!< Pointer to the first double in the array. */
 };
 
 /* Functions prototypes ================================================ */
@@ -1186,6 +1187,86 @@ void meanHarmonicFloatArray(const floatArray *arrayStruct, double *mean);
     \param[out] minimum         The address of the variable which will stores the harmonic \a mean
 */
 void meanHarmonicDoubleArray(const doubleArray *arrayStruct, double *mean);
+
+
+//Random array generator
+
+//Random Int Array
+
+/*! \fn         void randomInt8Array(const numberOfElements *arraySize, int8Array *arrayToGenerate)
+    \brief      Generate a random int8Array of size \a arraySize
+    \param[out] arrayToGenerate    The address of the int8Array which will be generated
+    \param arraySize    Size of the array
+*/
+void randomInt8Array(const numberOfElements *arraySize, int8Array *arrayToGenerate);
+
+/*! \fn         void randomInt16Array(const numberOfElements *arraySize, int16Array *arrayToGenerate)
+    \brief      Generate a random int16Array of size \a arraySize
+    \param[out] arrayToGenerate    The address of the int16Array which will be generated
+    \param arraySize    Size of the array
+*/
+void randomInt16Array(const numberOfElements *arraySize, int16Array *arrayToGenerate);
+
+/*! \fn         void randomInt32Array(const numberOfElements *arraySize, int32Array *arrayToGenerate)
+    \brief      Generate a random int32Array of size \a arraySize
+    \param[out] arrayToGenerate    The address of the int32Array which will be generated
+    \param arraySize    Size of the array
+*/
+void randomInt32Array(const numberOfElements *arraySize, int32Array *arrayToGenerate);
+
+/*! \fn         void randomInt64Array(const numberOfElements *arraySize, int64Array *arrayToGenerate)
+    \brief      Generate a random int64Array of size \a arraySize
+    \param[out] arrayToGenerate    The address of the int64Array which will be generated
+    \param arraySize    Size of the array
+*/
+void randomInt64Array(const numberOfElements *arraySize, int64Array *arrayToGenerate);
+
+//Random Unsigned Int Array
+
+/*! \fn         void randomUInt8Array(const numberOfElements *arraySize, uint8Array *arrayToGenerate)
+    \brief      Generate a random uint8Array of size \a arraySize
+    \param[out] arrayToGenerate    The address of the uint8Array which will be generated
+    \param arraySize    Size of the array
+*/
+void randomUInt8Array(const numberOfElements *arraySize, uint8Array *arrayToGenerate);
+
+/*! \fn         void randomUInt16Array(const numberOfElements *arraySize, uint16Array *arrayToGenerate)
+    \brief      Generate a random uint16Array of size \a arraySize
+    \param[out] arrayToGenerate    The address of the uint16Array which will be generated
+    \param arraySize    Size of the array
+*/
+void randomUInt16Array(const numberOfElements *arraySize, uint16Array *arrayToGenerate);
+
+/*! \fn         void randomUInt32Array(const numberOfElements *arraySize, uint32Array *arrayToGenerate)
+    \brief      Generate a random uint32Array of size \a arraySize
+    \param[out] arrayToGenerate    The address of the uint32Array which will be generated
+    \param arraySize    Size of the array
+*/
+void randomUInt32Array(const numberOfElements *arraySize, uint32Array *arrayToGenerate);
+
+/*! \fn         void randomUInt64Array(const numberOfElements *arraySize, uint64Array *arrayToGenerate)
+    \brief      Generate a random uint64Array of size \a arraySize
+    \param[out] arrayToGenerate    The address of the uint64Array which will be generated
+    \param arraySize    Size of the array
+*/
+void randomUInt64Array(const numberOfElements *arraySize, uint64Array *arrayToGenerate);
+
+//Random Float Array
+
+/*! \fn         void randomFloatArray(const numberOfElements *arraySize, floatArray *arrayToGenerate)
+    \brief      Generate a random floatArray of size \a arraySize
+    \param[out] arrayToGenerate    The address of the floatArray which will be generated
+    \param arraySize    Size of the array
+*/
+void randomFloatArray(const numberOfElements *arraySize, floatArray *arrayToGenerate);
+
+/*! \fn         void randomDoubleArray(const numberOfElements *arraySize, doubleArray *arrayToGenerate)
+    \brief      Generate a random doubleArray of size \a arraySize
+    \param[out] arrayToGenerate    The address of the doubleArray which will be generated
+    \param arraySize    Size of the array
+*/
+void randomDoubleArray(const numberOfElements *arraySize, doubleArray *arrayToGenerate);
+
 
 
 

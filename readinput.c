@@ -637,9 +637,6 @@ void readFileName(char filename[])
     //Verification pointer
     char *verification = NULL;
     
-    //Helps to check the input
-    char *endptr = NULL;
-
     //Invalid characters for filename
     const char INVALIDCHARACTERS[] = "&<>:\"/\\|?*;!{}' ";
 
